@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/services/service-5/assets/css/service-5.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <title>JONIETECH</title>
 </head>
 
@@ -66,7 +66,7 @@
                     <h4 class="mb-4">App Development</h4>
                     <p class="mb-4 text-secondary">We design stunning cross-platform mobile apps that are user-friendly and engaging.</p>
 
-                    <a href="#!" class="fw-bold text-decoration-none link-primary">
+                    <a href="assets/pages/app.html" class="fw-bold text-decoration-none link-primary">
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -84,7 +84,7 @@
                     
                     <h4 class="mb-4">Web Development</h4>
                     <p class="mb-4 text-secondary">We can help you to create a visually appealing and user-friendly website. </p>
-                    <a href="#!" class="fw-bold text-decoration-none link-primary">
+                    <a href="assets/pages/web.html" class="fw-bold text-decoration-none link-primary">
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -103,7 +103,7 @@
                         </svg>
                     <h4 class="mb-4">Graphic and UI/UX Designs</h4>
                     <p class="mb-4 text-secondary">We provide Quality Graphic designs including Ui/Ux designs for your websites or apps</p>
-                    <a href="#!" class="fw-bold text-decoration-none link-primary">
+                    <a href="assets/pages/graphics.html" class="fw-bold text-decoration-none link-primary">
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -121,7 +121,7 @@
                     </svg>
                     <h4 class="mb-4">Tech Support</h4>
                     <p class="mb-4 text-secondary">We offer free tech support to all of our clients. This means that you can always get help when you need it, no matter the time.</p>
-                    <a href="#!" class="fw-bold text-decoration-none link-primary">
+                    <a href="assets/pages/service.html" class="fw-bold text-decoration-none link-primary">
                         Learn More
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
@@ -147,7 +147,7 @@
             container_maine.classList.toggle('active');        }
 
         // Fetch and insert the footer
-        fetch('footer.html')
+        fetch('assets/pages/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;

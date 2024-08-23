@@ -30,7 +30,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/back.jpg');
+    background-image: url('../back.jpg');
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
@@ -53,6 +53,61 @@ body::before {
     /* scale: 70%; */
     background: rgba(13, 109, 253, 0.177);
 }
+
+.card .web-card {
+    width: 50vw; /* Make the card take up the full width of the page */
+    margin: 0 0 0 0;
+}
+.container .web-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.listing {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 0%;
+    padding-right: 0%;
+    background-color: rgba(68, 0, 255, 0.216);
+    width: 100%;
+    position:relative ;
+    overflow: hidden;
+    -webkit-text-fill-color: #e0e0e0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    margin-bottom: 0%;
+    text-align: center;
+}
+.price {
+    margin-top: 0px;
+    border-bottom-color: rgb(13 110 253);
+    border-bottom-width: 100 px;
+    
+}
+.price h5{
+    color: rgb(168, 10, 157);
+    font-weight:bolder;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    
+}
+
+.heading {
+    font-size: 30px;
+    color: white;
+    font-weight:900;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 5%;
+}
+
 .card.border-0.border-bottom.border-primary {
     border-width: 10px;
 }
