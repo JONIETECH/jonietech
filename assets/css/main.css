@@ -262,10 +262,11 @@ body::before {
     display: none;
 }
 
-.log-out{
-    position: relative;
-    top: 200px;
+.log-out {
+    position: absolute;
+    bottom: 0;
 }
+
 
 /* -- External Social Link CSS Styles -- */
 
