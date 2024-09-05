@@ -442,4 +442,18 @@ body::before {
 }
 
 
+@media only screen and (max-width: 675px) {
+    .text-uppercase {
+        margin-left: 20%;
+    }
+
+    .display-5{
+        margin-left: 30%;
+    }
+
+    .bsb-btn-2xl{
+        margin-left: 20%;
+    }
+
+}
 
