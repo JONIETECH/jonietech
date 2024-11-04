@@ -50,6 +50,31 @@ body::before {
 .section .card{
     /* scale: 70%; */
     background: rgba(13, 109, 253, 0.177);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: rgba(13, 109, 253, 0.25);
+}
+
+/* Add this for a smooth entrance animation when cards load */
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section .card {
+    animation: cardEntrance 1s ease-out;
 }
 
 .card .web-card {
@@ -456,3 +481,26 @@ body::before {
 
 }
 
+/* Remove the typing animation and replace with glowing effect */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 10px 10px rgba(13, 110, 253, 0.5);
+        opacity: 0.8;
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(13, 110, 253, 0.8),
+                     0 0 30px rgba(13, 110, 253, 0.4);
+        opacity: 1;
+    }
+    100% {
+        text-shadow: 0 10px 10px rgba(13, 110, 253, 0.5);
+        opacity: 0.8;
+    }
+}
+
+.display-5 {
+    color: #e0e0e0;
+    animation: textGlow 3s ease-in-out infinite;
+    font-weight: bold;
+    margin: 0 auto;
+}
