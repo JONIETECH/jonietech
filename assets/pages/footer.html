@@ -18,12 +18,10 @@
             <div class="row mb-5">
                 <div class="col-lg-7 mb-4 mb-lg-0">
                     <h2 class="display-4 fw-bold">Stay Updated with Our Latest News</h2>
-                    <p class="lead">Sign up to receive exclusive updates on new services, deals, and special promotions
+                    <p class="lead">Join Our Telegram Channel to receive exclusive updates on new services, deals, and special promotions
                         designed to satisfy you better.</p>
                         <div class="d-flex flex-column flex-md-row gap-3 newsletter">
-                            <input id="email-address" name="email" type="email" required placeholder="Enter your email"
-                                autocomplete="email" class="form-control border-secondary bg-dark text-light" />
-                            <button type="submit" id="subscribe-button" class="btn btn-warning mt-2 mt-md-0">Subscribe</button>
+                            <a target="_blank" href="https://t.me/jonietech" class="btn btn-warning mt-2 mt-md-0" id="subscribe-button"><i class="bi bi-telegram"></i>  Join Our Telegram Community</a>
                         </div>
                 </div>
                 <div class="col-md-5">
@@ -46,7 +44,7 @@
                         <div class="footer-card d-flex align-items-center">
                             <i class="fas fa-clock footer-icon"></i>
                             <div>
-                                <h5 class="fw-bold">Fast Delivery</h5>
+                                <h5 class="fw-bold">Fast Service Delivery</h5>
                                 <p>Experience Our thrillingly fast and reliable services.</p>
                             </div>
                         </div>
@@ -72,29 +70,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("1JzRgHvD1ulDItma1"); //public key from EmailJS
-        })();
-    </script>
-
-    <script>
-        document.getElementById('subscribe-button').addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent form from submitting in the traditional way
-            
-            var emailAddress = document.getElementById('email-address').value;
-            
-            emailjs.send('service_5o6orgr', 'template_3570xlk', {
-                email: emailAddress
-            }).then(function(response) {
-                alert('Subscription successful!'); // Display success message
-            }, function(error) {
-                alert('Failed to subscribe. Please try again.');
-            });
-        });
-    </script>
 
 </body>
 
