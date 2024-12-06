@@ -21,6 +21,7 @@ body {
     background-position: left;
     background-size: cover;
     position: relative; /* Make sure the body element is positioned */
+    padding-top: 90px;
 }
 
 body::before {
@@ -128,7 +129,7 @@ body::before {
     font-weight:900;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 20px;
 }
 
 .card.border-0.border-bottom.border-primary {
@@ -147,149 +148,125 @@ body::before {
 
 .container-main {
     display: flex;
+    justify-content: space-between;
     position: fixed;
-    flex-direction: column;
-    width: 200px;
-    height: 100vh;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
     align-items: center;
-    box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: 1s;
+    background: rgba(13, 16, 49, 0.9);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    margin-bottom: 0%;
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
 }
 
 .container-main .brand {
     display: flex;
-    width: 100%;
-    height: 40px;
-    padding: 0 10px;
-    margin: 10px 0;
     align-items: center;
-    justify-content: space-between;
+    margin-right: 40px;
 }
 
 .container-main .brand h3 {
-    font-weight: 300;
-    font-size: 20px;
     color: var(--primaer-color);
-}
-
-.container-main .brand a i {
-    color: var(--primaer-color);
-    font-size: 30px;
+    margin: 0;
+    font-size: 24px;
 }
 
 .container-main .navbar {
     display: flex;
-    width: 90%;
-    height: auto;
-    margin: 10px 0;
     align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    margin-left: auto;
+    padding-right: 40px;
 }
 
 .container-main .navbar ul {
-    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: flex-start;
-    justify-content: center;
-    margin-left: -30px;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
 }
 
 .container-main .navbar ul li {
-    height: 40px;
-    width: 100%;
-    margin: 5px 0;
-}
-
-.container-main .navbar ul li a {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    text-emphasis: none;
-    border-radius: 7px;
-    align-items: center;
-    justify-content: left;
-}
-
-.add .navbar:nth-child(4) {
-    margin: 0;
+    list-style: none;
 }
 
 .container-main .navbar ul li a {
     color: var(--primaer-color);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.container-main .navbar ul li a span {
-    font-size: 14px;
-    font-weight: 300;
+.container-main .navbar ul li a:hover {
+    background: transparent;
+}
+
+.container-main .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(13, 110, 253);
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.container-main .navbar ul li a:hover::after {
+    width: 80%;
 }
 
 .container-main .navbar ul li a i {
-    display: flex;
-    font-size: 20px;
-    margin: 0 15px;
-}
-
-.container-main .navbar ul li a:hover,
-.container-main .navbar ul li a:hover span,
-.container-main .navbar ul li a:hover i {
-    background: #d5cfcf14;
-    backdrop-filter: blur(75px);
-    transition: 0.5s all;
-    text-decoration: none;
-
-}
-
-.container-main .navbar ul li a:hover{
-    box-shadow: 0 5px 5px #000;
-    transition: 0.5s all;
-}
-
-.container-main.active {
-    width: 70px;
-}
-
-.container-main.active .brand {
-    justify-content: center;
-}
-
-.container-main.active .navbar ul {
-    width: 90%;
-}
-
-.container-main.active .user {
-    width: 80%;
-    height: 100%;
-}
-
-.container-main.active .navbar ul li a {
-    justify-content: center;
-}
-
-.container-main.active .brand .logo,
-.container-main.active .brand h3,
-.container-main.active .navbar ul li a span,
-.container-main.active .user .name {
     display: none;
 }
 
-.log-out {
-    position: absolute;
-    bottom: 0;
+.container-main .log-out {
+    display: none;
 }
 
+/* Add responsive styles */
+@media (max-width: 992px) {
+    #toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .container-main .navbar {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(13, 16, 49, 0.95);
+        padding: 20px;
+        padding-right: 0;
+    }
+
+    .container-main.active .navbar {
+        display: flex;
+    }
+
+    .container-main .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container-main .log-out {
+        margin-left: 0;
+    }
+}
 
 /* -- External Social Link CSS Styles -- */
 
@@ -503,4 +480,187 @@ body::before {
     animation: textGlow 3s ease-in-out infinite;
     font-weight: bold;
     margin: 0 auto;
+}
+
+/* Add these styles for the contact form */
+.form-control, .form-select {
+    padding: 0.8rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: rgb(13, 110, 253);
+}
+
+.contact-icon-box {
+    transition: all 0.3s ease;
+}
+
+.contact-icon-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Style for contact cards */
+.listing a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.listing:hover {
+    transform: translateY(-5px);
+    background-color: rgba(68, 0, 255, 0.3);
+}
+
+/* Add styles for the contact page */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+    color: rgb(13, 110, 253) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(13, 110, 253, 0.5);
+}
+
+.accordion-item {
+    background-color: rgba(13, 16, 49, 0.9) !important;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+/* Remove glowing effect for contact page heading */
+.contact-heading {
+    animation: none;
+}
+
+/* Update text colors */
+.text-secondary {
+    color: #58151c !important;
+}
+
+.accordion-body {
+    color: #58151c !important;
+}
+
+/* Make contact page elements more prominent */
+.contact-stats {
+    padding: 2rem;
+    background: rgba(13, 16, 49, 0.7);
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.stat-item {
+    padding: 2rem;
+    background: rgba(13, 16, 49, 0.7);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.stat-item i {
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover i {
+    transform: scale(1.2);
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    background: rgba(13, 16, 49, 0.9);
+}
+
+.stat-item h3 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+/* Enhanced FAQ styling */
+.accordion-button {
+    font-size: 1.2rem !important;
+    padding: 1.5rem !important;
+}
+
+.accordion-body {
+    font-size: 1.1rem;
+    padding: 1.5rem !important;
+}
+
+/* Enhanced contact icons */
+.contact-icon {
+    font-size: 3rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Add styles for contact icons */
+.section a:hover i {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.section a:hover h5 {
+    color: rgb(13, 110, 253) !important;
+    transition: color 0.3s ease;
+}
+
+/* Stats styles */
+.counter-section i {
+    transition: transform 0.3s ease;
+}
+
+.counter-section i:hover {
+    transform: scale(1.1);
+}
+
+/* Contact page card styles */
+.contact-card {
+    background: rgba(13, 16, 49, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.stat-box {
+    padding: 2rem;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    background: rgba(13, 110, 253, 0.15);
+}
+
+.contact-link {
+    display: block;
+    padding: 2rem;
+    background: rgba(13, 110, 253, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+.contact-link:hover {
+    transform: translateY(-10px);
+    background: rgba(13, 110, 253, 0.15);
+}
+
+.contact-link i {
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover i {
+    transform: scale(1.1);
 }

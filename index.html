@@ -14,31 +14,7 @@
 </head>
 
 <body>
-    <div class="container-main add" id="container">
-        <div class="brand">
-            <h3>JONIETECH</h3>
-            <a href="#" id="toggle"><i class="bi bi-list"></i></a>
-        </div>
-
-        <div class="navbar">
-            <ul>
-                <li><a href="/index.html"><i class="bi bi-house"></i><span>Home</span></a></li>
-                <li><a href="/assets/pages/contact.html"><i class="bi bi-chat-right-text"></i><span>Task Us</span></a></li>
-                <li><a href="/assets/pages/team.html"><i class="bi bi-people"></i><span>Our Team</span></a></li>
-                <li><a href="/assets/pages/service.html"><i class="bi bi-cash-coin"></i><span>Our Services</span></a></li>
-                <li><a href="/assets/pages/about.html"><i class="bi bi-person-fill-exclamation"></i><span>About Us</span></a></li>
-            </ul>
-        </div>
-
-        <div class="navbar log-out">
-            <ul>
-                <li><a target="_blank" href="https://github.com/JONIETECH"><i class="bi bi-github"></i><span>GitHub</span></a></li>
-                <li><a target="_blank" href="https://wa.me/256765761948"><i class="bi bi-whatsapp"></i><span>Whatsapp</span></a></li>
-                <li><a target="_blank" href="tel:+256765761948"><i class="bi bi-telephone"></i><span>Call Us Now</span></a></li>
-                <li><a target="_blank" href="https://t.me/jonietech"><i class="bi bi-telegram"></i><span>Telegram</span></a></li>
-            </ul>
-        </div>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <!-- MAIN BODY -->
 
@@ -151,11 +127,20 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        var toggle = document.getElementById("toggle");
-        var container_maine = document.getElementById("container");
+        // Fetch and insert the navbar
+        fetch('assets/pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                
+                // Add event listeners after navbar is loaded
+                var toggle = document.getElementById("toggle");
+                var container_maine = document.getElementById("container");
 
-        toggle.onclick = function () {
-            container_maine.classList.toggle('active');        }
+                toggle.onclick = function() {
+                    container_maine.classList.toggle('active');
+                }
+            });
 
         // Fetch and insert the footer
         fetch('assets/pages/footer.html')
