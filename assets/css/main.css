@@ -1095,3 +1095,51 @@ body.loading .content {
     opacity: 1;
     transition: opacity 0.5s ease-in;
 }
+
+/* Footer Styles */
+.container-foot {
+    background: rgba(13, 16, 49, 0.95);
+    padding: 60px 0 30px;
+    margin-top: 60px;
+}
+
+.container-foot a {
+    transition: all 0.3s ease;
+}
+
+.container-foot a:hover {
+    color: var(--bs-primary) !important;
+    transform: translateX(5px);
+}
+
+.container-foot .social-links a {
+    font-size: 1.5rem;
+}
+
+.container-foot .social-links a:hover {
+    transform: translateY(-5px);
+}
+
+.container-foot hr {
+    opacity: 0.1;
+}
+
+/* Footer mobile styles */
+@media (max-width: 576px) {
+    .container-foot {
+        padding: 30px 0 20px;
+    }
+
+    .container-foot h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .container-foot .social-links a {
+        font-size: 1.2rem;
+    }
+
+    .container-foot ul li {
+        font-size: 0.9rem;
+    }
+}
