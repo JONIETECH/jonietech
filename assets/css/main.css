@@ -199,7 +199,7 @@ body::before {
     list-style: none;
 }
 
-.container-main .navbar ul li a {
+.container-main .navbar ul li .nav-link {
     color: var(--primaer-color);
     text-decoration: none;
     padding: 8px 15px;
@@ -208,11 +208,7 @@ body::before {
     position: relative;
 }
 
-.container-main .navbar ul li a:hover {
-    background: transparent;
-}
-
-.container-main .navbar ul li a::after {
+.container-main .navbar ul li .nav-link::after {
     content: '';
     position: absolute;
     width: 0;
@@ -224,12 +220,17 @@ body::before {
     transform: translateX(-50%);
 }
 
-.container-main .navbar ul li a:hover::after {
+.container-main .navbar ul li .nav-link:hover::after,
+.container-main .navbar ul li .nav-link.active::after {
     width: 80%;
 }
 
-.container-main .navbar ul li a i {
-    display: none;
+.container-main .navbar ul li .nav-link.active {
+    color: rgb(13, 110, 253);
+}
+
+.container-main .navbar ul li .nav-link:hover {
+    color: rgb(13, 110, 253);
 }
 
 .container-main .log-out {
@@ -796,4 +797,120 @@ h3 {
 .work-content a:hover {
     opacity: 1;
     transform: scale(1.1);
+}
+
+/* About page specific styles */
+.social-links a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+}
+
+.rounded-circle {
+    border: 3px solid rgba(13, 110, 253, 0.2);
+    padding: 3px;
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover .rounded-circle {
+    border-color: rgb(13, 110, 253);
+    transform: scale(1.05);
+}
+
+/* Add these styles for active nav links */
+.container-main .navbar ul li a.active {
+    color: rgb(13, 110, 253);
+}
+
+.container-main .navbar ul li a.active::after {
+    width: 80%;
+    background-color: rgb(13, 110, 253);
+}
+
+/* Portfolio page specific styles */
+.project-stats {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.project-count .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+}
+
+.work-card .project-stats {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+/* FAQ Styles */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    background: rgba(13, 16, 49, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(13, 110, 253, 0.1);
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: rgba(13, 16, 49, 0.5);
+}
+
+.faq-answer.show {
+    max-height: 500px;
+    padding: 1.5rem;
+}
+
+.faq-answer p {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.faq-answer ul {
+    color: #e0e0e0;
+    padding-left: 1.5rem;
+}
+
+.faq-answer ul li {
+    margin-bottom: 0.5rem;
 }

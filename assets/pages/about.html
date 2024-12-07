@@ -9,68 +9,184 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
-    <title>JONIETECH</title>
+    <title>JONIETECH - About Us</title>
+    <script src="../js/nav.js"></script>
 </head>
 
 <body>
-    <div class="container-main add" id="container">
-        <div class="brand">
-            <h3>JONIETECH</h3>
-            <a href="#" id="toggle"><i class="bi bi-list"></i></a>
-        </div>
+    <!-- Placeholder for the navbar -->
+    <div id="navbar-placeholder"></div>
 
-        <div class="navbar">
-            <ul>
-                <li><a href="/index.html"><i class="bi bi-house"></i><span>Home</span></a></li>
-                <li><a href="#"><i class="bi bi-chat-right-text"></i><span>Book Us</span></a></li>
-                <li><a href="#"><i class="bi bi-people"></i><span>Reviews</span></a></li>
-                <li><a href="#"><i class="bi bi-cash-coin"></i><span>Our Services</span></a></li>
-                <li><a href="#"><i class="bi bi-person-fill-exclamation"></i><span>About Us</span></a></li>
-            </ul>
-        </div>
-
-        <div class="navbar log-out">
-            <ul>
-                <li><a href="tel:+256765761948"><i class="bi bi-telephone"></i><span>Call Us Now</span></a></li>
-                <li><a href="https://wa.me/256765761948"><i class="bi bi-whatsapp"></i><span>Whatsapp</span></a></li>
-                <li><a href="https://t.me/jonietech"><i class="bi bi-telegram"></i><span>Telegram</span></a></li>
-                <li><a href="https://www.youtube.com/@jonietech"><i class="bi bi-youtube"></i><span>Youtube</span></a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- heading -->
-    <div class="heading">
-        <span><h2 class="display-5 mb-3 mb-xl-4">About JONIETECH</h2></span>
-    </div>
-
-    <!-- MAIN BODY -->
-    <section class="section py-md-5 py-xl-8">
-        <div class="container web-container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-8 col-md-10 mb-4">
-                    <div class="card web-card border-0 border-bottom border-primary shadow-sm">
-                        <div class="card-body p-4 p-xxl-5">
-                            <h4 class="mb-4 text-center">Our Story</h4>
-                            <div class="text-secondary listing">
-                                <p>JONIETECH is a leading technology solutions provider based in Uganda. We specialize in web development, graphics design, and digital marketing solutions that help businesses grow in the digital age.</p>
-                                
-                                <h5 class="mt-4">Our Mission</h5>
-                                <p>To provide innovative and affordable technology solutions that empower businesses and individuals to achieve their digital goals.</p>
-                                
-                                <h5 class="mt-4">Our Vision</h5>
-                                <p>To become the most trusted technology partner in East Africa, known for excellence, innovation, and customer satisfaction.</p>
-                                
-                                <h5 class="mt-4">Why Choose Us?</h5>
-                                <ul>
-                                    <li>Expert Team</li>
-                                    <li>Quality Assurance</li>
-                                    <li>Affordable Solutions</li>
-                                    <li>24/7 Support</li>
-                                    <li>Custom Solutions</li>
-                                </ul>
+    <!-- Hero Section -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-white mb-4">Welcome to JONIETECH</h1>
+                    <p class="lead text-white-50 mb-4">
+                        We are a dynamic tech company specializing in innovative software solutions. Our mission is to transform ideas into powerful digital experiences that drive success for our clients.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="contact.html" class="btn btn-primary btn-lg rounded-pill">
+                            <i class="bi bi-chat-dots me-2"></i>Get in Touch
+                        </a>
+                        <a href="service.html" class="btn btn-outline-primary btn-lg rounded-pill">
+                            Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="contact-card p-4">
+                        <div class="row text-center g-4">
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">50+</h3>
+                                    <p class="text-white-50">Projects Completed</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">30+</h3>
+                                    <p class="text-white-50">Happy Clients</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">5+</h3>
+                                    <p class="text-white-50">Years Experience</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">24/7</h3>
+                                    <p class="text-white-50">Support Available</p>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contact-card p-4 p-xxl-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h3 class="display-6 mb-4">Our Story</h3>
+                                <p class="text-white-50 mb-4">
+                                    Founded in 2019, JONIETECH started with a vision to make quality tech solutions accessible to businesses of all sizes. What began as a small team of passionate developers has grown into a full-service tech company serving clients across Uganda and beyond.
+                                </p>
+                                <p class="text-white-50">
+                                    Our journey has been marked by continuous learning, innovation, and a commitment to excellence. We've evolved from a web development company to a comprehensive tech solutions provider, always staying ahead of industry trends.
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row g-4 mt-4 mt-lg-0">
+                                    <div class="col-6">
+                                        <div class="expertise-card p-4 text-center">
+                                            <i class="bi bi-rocket display-4 text-primary mb-3"></i>
+                                            <h5 class="text-white">Innovation</h5>
+                                            <p class="text-white-50">Pushing boundaries with creative solutions</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="expertise-card p-4 text-center">
+                                            <i class="bi bi-people display-4 text-primary mb-3"></i>
+                                            <h5 class="text-white">Collaboration</h5>
+                                            <p class="text-white-50">Working together for success</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-6 mb-3">Our Core Values</h3>
+                <p class="lead text-white-50 mb-4">The principles that guide everything we do</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-star display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Excellence</h5>
+                        <p class="text-white-50">Delivering the highest quality in everything we do</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Innovation</h5>
+                        <p class="text-white-50">Embracing new ideas and technologies</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-heart display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Integrity</h5>
+                        <p class="text-white-50">Being honest and transparent in all dealings</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-people display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Client Focus</h5>
+                        <p class="text-white-50">Putting our clients' needs first</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-6 mb-3">Our Team</h3>
+                <p class="lead text-white-50 mb-4">Meet the people behind JONIETECH</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="expertise-card p-4 text-center">
+                        <img src="../images/noface.jpg" alt="John Doe" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h5 class="text-white mb-2">RWOTHOMIO JONATHAN</h5>
+                        <p class="text-primary mb-3">Founder & CEO</p>
+                        <p class="text-white-50">Tech enthusiast with 5+ years of experience in software development</p>
+                        <div class="social-links mt-3">
+                            <a href="https://linkedin.com/in/jonathanrwothomio" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://twitter.com/joniepro" class="text-primary me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="https://github.com/JONIETECH" class="text-primary"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more team members as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="contact-card p-5 text-center">
+                        <h3 class="display-6 mb-4">Ready to Work Together?</h3>
+                        <p class="lead text-white-50 mb-4">Let's discuss how we can help bring your ideas to life</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5">
+                            <i class="bi bi-chat-dots me-2"></i>Contact Us
+                        </a>
                     </div>
                 </div>
             </div>
@@ -81,12 +197,12 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        var toggle = document.getElementById("toggle");
-        var container_maine = document.getElementById("container");
-
-        toggle.onclick = function () {
-            container_maine.classList.toggle('active');
-        }
+        // Fetch and insert the navbar
+        fetch('../pages/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
 
         // Fetch and insert the footer
         fetch('../pages/footer.html')

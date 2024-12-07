@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/services/service-5/assets/css/service-5.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>JONIETECH</title>
+    <script src="assets/js/nav.js"></script>
 </head>
 
 <body>
@@ -302,20 +303,9 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // Fetch and insert the navbar
-        fetch('assets/pages/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                
-                // Add event listeners after navbar is loaded
-                var toggle = document.getElementById("toggle");
-                var container_maine = document.getElementById("container");
-
-                toggle.onclick = function() {
-                    container_maine.classList.toggle('active');
-                }
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar('assets/pages/');
+        });
 
         // Fetch and insert the footer
         fetch('assets/pages/footer.html')
