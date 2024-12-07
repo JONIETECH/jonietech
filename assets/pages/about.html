@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <title>JONIETECH - About Us</title>
-    <script src="../js/nav.js"></script>
+    <script src="../js/nav.js" defer></script>
 </head>
 
 <body>
@@ -68,6 +68,8 @@
             </div>
         </div>
     </section>
+    <br>
+    <br>
 
     <!-- Our Story Section -->
     <section class="section py-md-5">
@@ -204,19 +206,18 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // Fetch and insert the navbar
-        fetch('../pages/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar('../pages/');
+        });
 
-        // Fetch and insert the footer
-        fetch('../pages/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+        // Separate the footer loading
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../pages/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
     </script>
 </body>
 </html>

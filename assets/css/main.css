@@ -245,18 +245,27 @@ body::before {
     }
 
     .container-main .navbar {
-        display: none;
-        position: absolute;
+        position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         width: 100%;
+        height: 0;
         background: rgba(13, 16, 49, 0.95);
-        padding: 20px;
-        padding-right: 0;
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000; /* Ensure menu is above other content */
     }
 
     .container-main.active .navbar {
-        display: flex;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .container-main .navbar ul {
@@ -266,6 +275,13 @@ body::before {
 
     .container-main .log-out {
         margin-left: 0;
+    }
+
+    /* Ensure hamburger is visible */
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 1001;
     }
 }
 
@@ -945,13 +961,13 @@ h3 {
         position: fixed;
         top: 70px;
         left: 0;
+        right: 0;
         width: 100%;
         height: 0;
         background: rgba(13, 16, 49, 0.95);
         backdrop-filter: blur(10px);
         overflow: hidden;
         transition: all 0.3s ease-in-out;
-        padding: 0;
         opacity: 0;
         visibility: hidden;
     }
@@ -961,6 +977,7 @@ h3 {
         opacity: 1;
         visibility: visible;
         padding: 20px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .container-main .navbar ul {
@@ -973,6 +990,12 @@ h3 {
         width: 100%;
         text-align: center;
         margin: 10px 0;
+    }
+
+    .container-main .navbar ul li .nav-link {
+        padding: 15px;
+        width: 100%;
+        display: block;
     }
 
     /* Fix stats section overflow */

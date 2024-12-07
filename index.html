@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/services/service-5/assets/css/service-5.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <title>JONIETECH</title>
-    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/nav.js" defer></script>
 </head>
 
 <body>
@@ -307,12 +307,14 @@
             loadNavbar('assets/pages/');
         });
 
-        // Fetch and insert the footer
-        fetch('assets/pages/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+        // Separate the footer loading
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('assets/pages/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
     </script>
 </body>
 

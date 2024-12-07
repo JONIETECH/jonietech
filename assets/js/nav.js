@@ -2,22 +2,15 @@ function setActiveNavLink() {
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-link');
     
-    // Get the current page name from the path
     let currentPage = currentPath.split('/').pop().replace('.html', '');
     
-    // Handle root path and index
     if (currentPath === '/' || currentPath.endsWith('index.html') || currentPage === '') {
         currentPage = 'index';
     }
     
     navLinks.forEach(link => {
-        // Remove active class from all links
         link.classList.remove('active');
-        
-        // Get page identifier from data attribute
         const pageId = link.getAttribute('data-page');
-        
-        // Add active class if current page matches
         if (pageId === currentPage) {
             link.classList.add('active');
         }
@@ -25,44 +18,59 @@ function setActiveNavLink() {
 }
 
 function initializeHamburgerMenu() {
-    const hamburger = document.getElementById('hamburger-menu');
-    const container = document.getElementById('container');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Wait for elements to be available
+    setTimeout(() => {
+        const hamburger = document.getElementById('hamburger-menu');
+        const container = document.getElementById('container');
+        
+        if (!hamburger || !container) {
+            console.warn('Menu elements not found, retrying...');
+            return;
+        }
 
-    if (hamburger && container) {
-        // Prevent event bubbling
-        hamburger.addEventListener('click', (e) => {
+        // Remove any existing listeners
+        hamburger.replaceWith(hamburger.cloneNode(true));
+        const newHamburger = document.getElementById('hamburger-menu');
+        
+        // Add click handler
+        newHamburger.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             container.classList.toggle('active');
-        });
-
-        // Close menu when clicking a link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                container.classList.remove('active');
-            });
+            console.log('Menu toggled, active:', container.classList.contains('active'));
         });
 
         // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
+        document.addEventListener('click', function(e) {
             if (!container.contains(e.target)) {
                 container.classList.remove('active');
             }
         });
-    }
+
+    }, 100); // Small delay to ensure DOM is ready
 }
 
-// Function to load navbar
 function loadNavbar(relativePath = '') {
     fetch(relativePath + 'navbar.html')
         .then(response => response.text())
         .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-            initializeHamburgerMenu();
-            setTimeout(setActiveNavLink, 100);
+            const placeholder = document.getElementById('navbar-placeholder');
+            if (placeholder) {
+                placeholder.innerHTML = data;
+                initializeHamburgerMenu();
+                setActiveNavLink();
+            }
+        })
+        .catch(error => {
+            console.error('Error loading navbar:', error);
         });
 }
 
-// Run setActiveNavLink when the page loads and after any navigation
-window.addEventListener('load', setActiveNavLink);
-window.addEventListener('popstate', setActiveNavLink); 
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    const path = window.location.pathname.includes('/index.html') || 
+                 window.location.pathname === '/' ? 
+                 'assets/pages/' : '../pages/';
+    loadNavbar(path);
+});
+
