@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>JONIETECH - Contact</title>
     <script src="../js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="../js/form.js"></script>
 </head>
 
 <body>
@@ -196,42 +198,40 @@
                         <div class="card-body p-4 p-xxl-5">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-lg-10">
-                                    <form action="https://formspree.io/f/your_form_id" method="POST">
-                                        <div class="row g-4">
-                                            <div class="col-12 col-md-6">
-                                                <label for="name" class="form-label text-white">Full Name</label>
-                                                <input type="text" class="form-control bg-dark text-white border-primary" id="name" name="name" required>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <label for="email" class="form-label text-white">Email</label>
-                                                <input type="email" class="form-control bg-dark text-white border-primary" id="email" name="email" required>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <label for="phone" class="form-label text-white">Phone Number</label>
-                                                <input type="tel" class="form-control bg-dark text-white border-primary" id="phone" name="phone" required>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <label for="service" class="form-label text-white">Service Needed</label>
-                                                <select class="form-select bg-dark text-white border-primary" id="service" name="service" required>
-                                                    <option value="">Select a service</option>
-                                                    <option value="web">Web Development</option>
-                                                    <option value="app">App Development</option>
-                                                    <option value="graphics">Graphics Design</option>
-                                                    <option value="ui">UI/UX Design</option>
-                                                    <option value="systems">Systems Design</option>
-                                                    <option value="join">Join The Team</option>
-                                                    <option value="other">Other</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <label for="message" class="form-label text-white">Project Details</label>
-                                                <textarea class="form-control bg-dark text-white border-primary" id="message" name="message" rows="5" required></textarea>
-                                            </div>
-                                            <div class="col-12 text-center">
-                                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
-                                                    <i class="bi bi-send me-2"></i>Send Request
-                                                </button>
-                                            </div>
+                                    <form id="contactForm" class="row g-4">
+                                        <div class="col-12 col-md-6">
+                                            <label for="name" class="form-label text-white">Full Name</label>
+                                            <input type="text" class="form-control bg-dark text-white border-primary" id="name" name="name" required>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="email" class="form-label text-white">Email</label>
+                                            <input type="email" class="form-control bg-dark text-white border-primary" id="email" name="email" required>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="phone" class="form-label text-white">Phone Number</label>
+                                            <input type="tel" class="form-control bg-dark text-white border-primary" id="phone" name="phone" required>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="service" class="form-label text-white">Service Needed</label>
+                                            <select class="form-select bg-dark text-white border-primary" id="service" name="service" required>
+                                                <option value="">Select a service</option>
+                                                <option value="web">Web Development</option>
+                                                <option value="app">App Development</option>
+                                                <option value="graphics">Graphics Design</option>
+                                                <option value="ui">UI/UX Design</option>
+                                                <option value="systems">Systems Design</option>
+                                                <option value="join">Join The Team</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label text-white">Project Details</label>
+                                            <textarea class="form-control bg-dark text-white border-primary" id="message" name="message" rows="5" required></textarea>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
+                                                <i class="bi bi-send me-2"></i>Send Request
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
