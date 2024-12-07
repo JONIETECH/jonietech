@@ -24,13 +24,41 @@ function setActiveNavLink() {
     });
 }
 
+function initializeHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const container = document.getElementById('container');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburger && container) {
+        // Prevent event bubbling
+        hamburger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            container.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                container.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!container.contains(e.target)) {
+                container.classList.remove('active');
+            }
+        });
+    }
+}
+
 // Function to load navbar
 function loadNavbar(relativePath = '') {
     fetch(relativePath + 'navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
-            // Add a small delay to ensure DOM is updated
+            initializeHamburgerMenu();
             setTimeout(setActiveNavLink, 100);
         });
 }
