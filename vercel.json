@@ -1,0 +1,45 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/about",
+        "destination": "/pages/about.html"
+      },
+      {
+        "source": "/app",
+        "destination": "/pages/app.html"
+      },
+      {
+        "source": "/contact",
+        "destination": "/pages/contact.html"
+      },
+      {
+        "source": "/graphics",
+        "destination": "/pages/graphics.html"
+      },
+      {
+        "source": "/portfolio",
+        "destination": "/pages/portfolio.html"
+      },
+      {
+        "source": "/service",
+        "destination": "/pages/service.html"
+      },
+      {
+        "source": "/support",
+        "destination": "/pages/support.html"
+      },
+      {
+        "source": "/team",
+        "destination": "/pages/team.html"
+      },
+      {
+        "source": "/web",
+        "destination": "/pages/web.html"
+      }
+    ]
+  }
+  
