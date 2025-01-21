@@ -3,6 +3,51 @@ const CleanCSS = require('clean-css');
 const fs = require('fs');
 const path = require('path');
 
+// Ensure public directory exists
+const publicDir = path.join(__dirname, 'public');
+if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+}
+
+// Copy function to handle directories recursively
+function copyDirectory(source, destination) {
+    if (!fs.existsSync(destination)) {
+        fs.mkdirSync(destination, { recursive: true });
+    }
+
+    const files = fs.readdirSync(source);
+    files.forEach(file => {
+        const sourcePath = path.join(source, file);
+        const destPath = path.join(destination, file);
+        
+        if (fs.lstatSync(sourcePath).isDirectory()) {
+            copyDirectory(sourcePath, destPath);
+        } else {
+            fs.copyFileSync(sourcePath, destPath);
+        }
+    });
+}
+
+// Copy all static files to public directory
+function copyStaticFiles() {
+    // Copy HTML files
+    fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(publicDir, 'index.html'));
+    
+    // Copy assets directory
+    const assetsDir = path.join(__dirname, 'assets');
+    if (fs.existsSync(assetsDir)) {
+        copyDirectory(assetsDir, path.join(publicDir, 'assets'));
+    }
+
+    // Copy other necessary files
+    const filesToCopy = ['robots.txt', 'sitemap.xml'];
+    filesToCopy.forEach(file => {
+        if (fs.existsSync(path.join(__dirname, file))) {
+            fs.copyFileSync(path.join(__dirname, file), path.join(publicDir, file));
+        }
+    });
+}
+
 // Minify JavaScript
 async function minifyJS(inputPath, outputPath) {
     try {
@@ -53,7 +98,7 @@ function ensureDirectoryExistence(filePath) {
 }
 
 // Process all JS files
-const jsDir = path.join(__dirname, 'assets/js');
+const jsDir = path.join(publicDir, 'assets/js');
 try {
     if (fs.existsSync(jsDir)) {
         fs.readdirSync(jsDir).forEach(file => {
@@ -72,7 +117,7 @@ try {
 }
 
 // Process all CSS files
-const cssDir = path.join(__dirname, 'assets/css');
+const cssDir = path.join(publicDir, 'assets/css');
 try {
     if (fs.existsSync(cssDir)) {
         fs.readdirSync(cssDir).forEach(file => {
@@ -88,4 +133,9 @@ try {
     }
 } catch (error) {
     console.error('Error processing CSS files:', error);
-} 
+}
+
+// Execute the build process
+console.log('Starting build process...');
+copyStaticFiles();
+console.log('Build process completed!'); 
