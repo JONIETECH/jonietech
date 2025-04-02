@@ -169,6 +169,7 @@ body::before {
     display: flex;
     align-items: center;
     margin-right: 40px;
+    max-width: 140px; /* Add a max-width to the brand container */
 }
 
 .container-main .brand h3 {
@@ -1142,4 +1143,20 @@ body.loading .content {
     .container-foot ul li {
         font-size: 0.9rem;
     }
+}
+
+.brand a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.brand a:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo {
+    height: 40px; /* Control the height */
+    max-width: 132px; /* Maintains aspect ratio (roughly 1080/326 = 3.31, so 40px * 3.31 ≈ 132px) */
+    width: auto;
+    object-fit: contain;
 }

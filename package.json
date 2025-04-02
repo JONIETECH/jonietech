@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "build": "node build.js",
-    "start": "node build.js"
+    "start": "node build.js",
+    "minify-css": "cleancss -o assets/css/main.min.css assets/css/main.css"
   },
   "keywords": [],
   "author": "",
