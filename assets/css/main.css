@@ -1411,3 +1411,53 @@ body {
     font-weight: bold;
     font-style: normal;
 }
+
+/* Apply Teknaf font to headings */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.heading {
+    font-family: 'Teknaf', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Update specific heading styles */
+.heading {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    color: #e0e0e0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section h4 {
+    color: #e0e0e0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Update card headings */
+.card h3, .card h4, .card h5 {
+    font-family: 'Teknaf', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Update listing headings */
+.listing {
+    font-family: 'Teknaf', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Adjust font sizes for mobile */
+@media (max-width: 576px) {
+    h1, .display-1 { font-size: 2.5rem; }
+    h2, .display-2 { font-size: 2rem; }
+    h3, .display-3 { font-size: 1.75rem; }
+    h4, .display-4 { font-size: 1.5rem; }
+    h5, .display-5 { font-size: 1.25rem; }
+    h6, .display-6 { font-size: 1rem; }
+}
