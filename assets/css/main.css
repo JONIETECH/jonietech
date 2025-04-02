@@ -163,6 +163,7 @@ body::before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 1000;
     padding: 0 20px;
+    transition: transform 0.3s ease;
 }
 
 .container-main .brand {
@@ -1337,6 +1338,7 @@ body.loading .content {
     z-index: 1001;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .tagline-section::before {
@@ -1460,4 +1462,25 @@ h1, h2, h3, h4, h5, h6,
     h4, .display-4 { font-size: 1.5rem; }
     h5, .display-5 { font-size: 1.25rem; }
     h6, .display-6 { font-size: 1rem; }
+}
+
+/* Add transition for smooth navbar hide/show */
+.container-main {
+    /* ... existing styles ... */
+    transition: transform 0.3s ease;
+}
+
+/* Class to hide navbar */
+.navbar-hidden {
+    transform: translateY(-100%);
+}
+
+/* Keep tagline section behavior separate */
+.tagline-section {
+    /* ... existing styles ... */
+    transition: transform 0.3s ease;
+}
+
+.tagline-hidden {
+    transform: translateY(-100%);
 }

@@ -50,7 +50,61 @@ function initializeHamburgerMenu() {
     }, 100); // Small delay to ensure DOM is ready
 }
 
+function initializeScrollBehavior() {
+    let lastScrollTop = 0;
+    let isScrolling = false;
+
+    function onScroll() {
+        if (!isScrolling) {
+            isScrolling = true;
+            window.requestAnimationFrame(() => {
+                handleScroll();
+                isScrolling = false;
+            });
+        }
+    }
+
+    function handleScroll() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        const navbar = document.querySelector('.container-main');
+        const tagline = document.querySelector('.tagline-section');
+        
+        // Don't hide navbar when at the top
+        if (currentScroll <= 0) {
+            navbar?.classList.remove('navbar-hidden');
+            tagline?.classList.remove('tagline-hidden');
+            return;
+        }
+
+        // Show/hide based on scroll direction
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            navbar?.classList.add('navbar-hidden');
+            tagline?.classList.add('tagline-hidden');
+        } else {
+            // Scrolling up
+            navbar?.classList.remove('navbar-hidden');
+            tagline?.classList.remove('tagline-hidden');
+        }
+
+        lastScrollTop = currentScroll;
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
+
 function loadNavbar(relativePath = '') {
+    // Check if navbar is already in the page (home page case)
+    const existingNavbar = document.querySelector('.container-main');
+    if (existingNavbar) {
+        initializeHamburgerMenu();
+        setActiveNavLink();
+        initializeScrollBehavior();
+        return;
+    }
+
+    // Otherwise load it dynamically (other pages)
     fetch(relativePath + 'navbar.html')
         .then(response => response.text())
         .then(data => {
@@ -59,6 +113,7 @@ function loadNavbar(relativePath = '') {
                 placeholder.innerHTML = data;
                 initializeHamburgerMenu();
                 setActiveNavLink();
+                initializeScrollBehavior();
             }
         })
         .catch(error => {
