@@ -1164,3 +1164,62 @@ body.loading .content {
     width: auto;
     object-fit: contain;
 }
+
+/* Action buttons styles */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.action-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primaer-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: rgba(13, 110, 253, 0.2);
+    color: rgb(13, 110, 253);
+    transform: translateY(-2px);
+}
+
+.contact-btn {
+    padding: 8px 20px;
+    background: rgb(13, 110, 253);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: rgb(10, 88, 202);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Update responsive styles */
+@media (max-width: 992px) {
+    .nav-actions {
+        display: none; /* Hide on mobile */
+    }
+    
+    /* Add these buttons to mobile menu */
+    .navbar.active .nav-actions-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
