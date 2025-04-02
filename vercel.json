@@ -1,45 +1,48 @@
 {
-    "rewrites": [
-      {
-        "source": "/",
-        "destination": "/index.html"
-      },
-      {
-        "source": "/about",
-        "destination": "/assets/pages/about.html"
-      },
-      {
-        "source": "/app",
-        "destination": "/assets/pages/app.html"
-      },
-      {
-        "source": "/contact",
-        "destination": "/assets/pages/contact.html"
-      },
-      {
-        "source": "/graphics",
-        "destination": "/assets/pages/graphics.html"
-      },
-      {
-        "source": "/portfolio",
-        "destination": "/assets/pages/portfolio.html"
-      },
-      {
-        "source": "/service",
-        "destination": "/assets/pages/service.html"
-      },
-      {
-        "source": "/support",
-        "destination": "/assets/pages/support.html"
-      },
-      {
-        "source": "/team",
-        "destination": "/assets/pages/team.html"
-      },
-      {
-        "source": "/web",
-        "destination": "/assets/pages/web.html"
-      }
-    ]
-  }
+  "version": 2,
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)\\.html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(.*)\\.css",
+      "dest": "/$1.css"
+    },
+    {
+      "src": "/(.*)\\.js",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "/(.*)\\.woff",
+      "dest": "/$1.woff"
+    },
+    {
+      "src": "/(.*)\\.jpg",
+      "dest": "/$1.jpg"
+    },
+    {
+      "src": "/(.*)\\.png",
+      "dest": "/$1.png"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/site.webmanifest",
+      "dest": "/site.webmanifest"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
   
