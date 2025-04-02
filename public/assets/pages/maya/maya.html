@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIVAN</title>
+    <link rel="icon" href="/assets/pages/maya/hrt.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(rgba(214, 9, 108, 0.8), rgba(255, 230, 242, 0.89)),
+                        url('/assets/pages/maya/IVANO.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .envelope-container {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 1;
+        }
+
+        .envelope {
+            width: 400px;
+            height: 280px;
+            background: #ff3366;
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .envelope::before {
+            content: '';
+            position: absolute;
+            top: -0%;
+            left: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 140px solid #ff1a4d;
+            transform: rotate(180deg);
+        }
+
+        .note {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            z-index: 3;
+            backdrop-filter: blur(5px);
+        }
+
+        .note p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            color: #660033;
+            margin: 20px 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff3366;
+            font-size: 28px;
+            animation: float 3s infinite;
+        }
+
+        .open {
+            transform: translateY(-50px);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .show {
+            display: block;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .envelope {
+                width: 300px;
+                height: 210px;
+            }
+            .envelope::before {
+                top: -0%;
+                border-left: 150px solid transparent;
+                border-right: 150px solid transparent;
+                border-bottom: 105px solid #ff1a4d;
+            }
+            .note {
+                width: 280px;
+                padding: 25px;
+            }
+            .note p {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts">
+        <div class="heart" style="left: 20%; top: 30%">❤️</div>
+        <div class="heart" style="left: 70%; top: 20%">❤️</div>
+        <div class="heart" style="left: 50%; top: 50%">❤️</div>
+    </div>
+    <div class="envelope-container" onclick="toggleCard()">
+        <div class="envelope">
+            <div class="hearts">
+                <div class="heart" style="left: 20%; top: 30%">❤️</div>
+                <div class="heart" style="left: 70%; top: 20%">❤️</div>
+                <div class="heart" style="left: 50%; top: 50%">❤️</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="note" id="note">
+        <p>You're not just my Valentine, you're my best friend, my confidant, and the love of my life. Our love story is my favorite adventure.</p>
+        <p>You make my world a better place. You're the missing piece I never knew I needed, and now I couldn't imagine living without you.</p>
+        <p>You're my forever home, my safe haven, and my soulmate. Our love is a journey, and I'm so excited to see where it takes us.</p>
+        <p>I love you more with every heartbeat, every smile, and every moment we share. Happy Valentine's Day, my love! ❤️</p>
+        <p>Happy Valentine's Day, my love! ❤️</p>
+    </div>
+
+    <div class="hearts">
+        <div class="heart" style="left: 20%; top: 30%">❤️</div>
+        <div class="heart" style="left: 70%; top: 20%">❤️</div>
+        <div class="heart" style="left: 50%; top: 50%">❤️</div>
+    </div>
+
+    <script>
+        function toggleCard() {
+            const envelope = document.querySelector('.envelope-container');
+            const note = document.getElementById('note');
+            
+            envelope.classList.toggle('open');
+            note.classList.toggle('show');
+            
+            if (note.classList.contains('show')) {
+                const heartsContainer = document.querySelector('.hearts');
+                for (let i = 0; i < 10; i++) {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.top = Math.random() * 100 + '%';
+                    heart.innerHTML = '❤️';
+                    heartsContainer.appendChild(heart);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

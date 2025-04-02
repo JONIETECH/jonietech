@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jonietech.com/sitemap.xml 

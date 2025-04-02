@@ -2,11 +2,30 @@
   "version": 2,
   "routes": [
     {
-      "src": "/assets/(.*)\\.min\\.(js|css)",
+      "src": "/apple-touch-icon.png",
+      "dest": "/apple-touch-icon.png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "dest": "/favicon-32x32.png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "dest": "/favicon-16x16.png"
+    },
+    {
+      "src": "/assets/js/nav.min.js",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       },
-      "dest": "/assets/$1.min.$2"
+      "dest": "/assets/js/nav.min.js"
+    },
+    {
+      "src": "/assets/css/main.min.css",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/css/main.min.css"
     },
     {
       "src": "/assets/(.*)",
@@ -35,10 +54,6 @@
     {
       "src": "/(.*)\\.png",
       "dest": "/$1.png"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
     },
     {
       "src": "/site.webmanifest",
