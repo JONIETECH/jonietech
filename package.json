@@ -6,17 +6,18 @@
   "scripts": {
     "build": "node build.js",
     "start": "node build.js",
-    "minify-css": "cleancss -o assets/css/main.min.css assets/css/main.css"
+    "minify-css": "cleancss -o assets/css/main.min.css assets/css/main.css",
+    "minify-js": "terser assets/js/nav.js -o assets/js/nav.min.js -c -m"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "clean-css": "^5.3.3",
-    "terser": "^5.37.0"
+    "clean-css": "^5.3.3"
   },
   "devDependencies": {
     "clean-css-cli": "^5.6.3",
-    "html-minifier": "^4.0.0"
+    "html-minifier": "^4.0.0",
+    "terser": "^5.39.0"
   }
 }

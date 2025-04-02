@@ -125,7 +125,7 @@ function loadNavbar(relativePath = '') {
 document.addEventListener('DOMContentLoaded', () => {
     const path = window.location.pathname.includes('/index.html') || 
                  window.location.pathname === '/' ? 
-                 'assets/pages/' : '../pages/';
+                 '/assets/pages/' : '../pages/';
     loadNavbar(path);
 });
 
