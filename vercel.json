@@ -2,6 +2,13 @@
   "version": 2,
   "routes": [
     {
+      "src": "/assets/(.*)\\.min\\.(js|css)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/assets/$1.min.$2"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
@@ -43,6 +50,11 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
   

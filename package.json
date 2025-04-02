@@ -4,7 +4,7 @@
   "description": "JONIETECH website",
   "main": "build.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "npm run minify-css && npm run minify-js && node build.js",
     "start": "node build.js",
     "minify-css": "cleancss -o assets/css/main.min.css assets/css/main.css",
     "minify-js": "terser assets/js/nav.js -o assets/js/nav.min.js -c -m"
