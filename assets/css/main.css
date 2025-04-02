@@ -21,7 +21,8 @@ body {
     background-position: left;
     background-size: cover;
     position: relative; /* Make sure the body element is positioned */
-    padding-top: 90px;
+    margin: 0;
+    padding-top: 70px; /* Match navbar height */
 }
 
 body::before {
@@ -149,8 +150,9 @@ body::before {
 .container-main {
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    flex-direction: row;
+    position: fixed; /* Make navbar fixed */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 70px;
     align-items: center;
@@ -160,8 +162,6 @@ body::before {
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     z-index: 1000;
-    top: 0;
-    left: 0;
     padding: 0 20px;
 }
 
@@ -1037,6 +1037,10 @@ h3 {
     .container-main {
         padding: 0 15px;
     }
+
+    body {
+        padding-top: 60px; /* Match smaller navbar height on mobile */
+    }
 }
 
 /* Loading Screen Styles */
@@ -1148,19 +1152,19 @@ body.loading .content {
 .brand a {
     display: block;
     transition: transform 0.3s ease;
-    background-color: #fff;
-    padding: 2px 2px;
+    background-color: transparent;
+    padding: 2px;
     border-radius: 12px;
+    border: 2px solid rgba(13, 110, 253, 0.3);
 }
 
 .brand a:hover {
     transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgb(13, 110, 253);
 }
 
 .nav-logo {
     height: 40px;
-    max-width: 132px;
     width: auto;
     object-fit: contain;
 }
@@ -1185,6 +1189,7 @@ body.loading .content {
     color: var(--primaer-color);
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 1.2rem;
 }
 
 .action-btn:hover {
@@ -1193,33 +1198,120 @@ body.loading .content {
     transform: translateY(-2px);
 }
 
-.contact-btn {
-    padding: 8px 20px;
-    background: rgb(13, 110, 253);
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-    background: rgb(10, 88, 202);
-    color: white;
-    transform: translateY(-2px);
-}
-
-/* Update responsive styles */
+/* Responsive styles */
 @media (max-width: 992px) {
-    .nav-actions {
-        display: none; /* Hide on mobile */
+    .container-main {
+        padding: 0 15px;
     }
-    
-    /* Add these buttons to mobile menu */
-    .navbar.active .nav-actions-mobile {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 20px;
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(13, 16, 49, 0.95);
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar.active {
+        height: auto;
+        padding: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul li {
+        width: 100%;
+    }
+
+    .navbar ul li a {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-main {
+        height: 60px;
+        padding: 0 10px;
+    }
+
+    .nav-logo {
+        height: 35px;
+    }
+
+    .action-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-actions {
+        gap: 6px;
+        margin-right: 15px;
+    }
+
+    .navbar.active {
+        padding: 15px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+}
+
+/* General responsive improvements for the homepage */
+@media (max-width: 992px) {
+    .section {
+        padding: 40px 0;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 30px 0;
+    }
+
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .work-card img {
+        height: 200px;
+        object-fit: cover;
     }
 }
