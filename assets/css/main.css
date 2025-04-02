@@ -1148,15 +1148,19 @@ body.loading .content {
 .brand a {
     display: block;
     transition: transform 0.3s ease;
+    background-color: #fff;
+    padding: 2px 2px;
+    border-radius: 12px;
 }
 
 .brand a:hover {
     transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .nav-logo {
-    height: 40px; /* Control the height */
-    max-width: 132px; /* Maintains aspect ratio (roughly 1080/326 = 3.31, so 40px * 3.31 ≈ 132px) */
+    height: 40px;
+    max-width: 132px;
     width: auto;
     object-fit: contain;
 }
