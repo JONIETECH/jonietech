@@ -32,10 +32,10 @@ body::before {
     left: -10%;
     width: 120%;
     height: 120%;
-    background-image: url('../back.jpg');
+    background-image: url('../images/texture.jpg');
     background-repeat: no-repeat;
     background-position: left;
-    background-size:cover;
+    background-size: cover;
     background-blend-mode: normal;
     transform: scaleX(-1); /* Flip the image horizontally */
     z-index: -1; /* Ensure the pseudo-element is behind the content */

@@ -3,7 +3,7 @@
 </div>
 <div class="container-main" id="container">
     <div class="brand">
-        <a href="/index.html">
+        <a href="#home">
             <img src="/assets/images/logo.png" alt="JonieTech Logo" class="nav-logo">
         </a>
     </div>
@@ -28,11 +28,71 @@
 
     <div class="navbar" id="navbar-menu">
         <ul>
-            <li><a href="/index.html" class="nav-link" data-page="index">Home</a></li>
-            <li><a href="/assets/pages/service.html" class="nav-link" data-page="service">Our Services</a></li>
-            <li><a href="/assets/pages/portfolio.html" class="nav-link" data-page="portfolio">Our Projects</a></li>
-            <li><a href="/assets/pages/about.html" class="nav-link" data-page="about">About Us</a></li>
-            <li><a href="/assets/pages/contact.html" class="nav-link" data-page="contact">Contact Us</a></li>
+            <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="#services" class="nav-link" data-page="services">Our Services</a></li>
+            <li><a href="#technologies" class="nav-link" data-page="technologies">Technologies</a></li>
+            <li><a href="#projects" class="nav-link" data-page="projects">Our Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-page="contact">Contact Us</a></li>
         </ul>
     </div>
-</div> 
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load navbar functionality
+        const hamburger = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar-menu');
+        const container = document.getElementById('container');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            container.classList.toggle('active');
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                navbar.classList.remove('active');
+                container.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll to sections
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu after clicking
+                    navbar.classList.remove('active');
+                    container.classList.remove('active');
+                }
+            });
+        });
+
+        // Add active class to current section
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight/3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    });
+</script> 
