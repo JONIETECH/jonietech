@@ -1484,3 +1484,112 @@ h1, h2, h3, h4, h5, h6,
 .tagline-hidden {
     transform: translateY(-100%);
 }
+
+/* Update text colors for better visibility */
+.section p, .lead, p {
+    color: #ffffff !important; /* Brighter white for better visibility */
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.8) !important; /* Increased opacity for better readability */
+}
+
+/* Ensure proper scaling on mobile */
+@media (max-width: 768px) {
+    .hero-img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+    }
+    
+    .display-3 {
+        font-size: 2rem !important;
+    }
+    
+    .lead {
+        font-size: 1rem !important;
+    }
+    
+    /* Improve button alignment on mobile */
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+    
+    /* Adjust spacing for mobile */
+    .section {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Fix image scaling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Center align hero section text on mobile */
+    #home .col-lg-6 {
+        text-align: center;
+    }
+    
+    #home .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+
+/* Fix specific mobile scaling issues */
+@media (max-width: 576px) {
+    /* Ensure buttons are properly sized and centered */
+    .btn {
+        width: auto;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    
+    /* Make container full width on mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Center align buttons */
+    .d-flex.gap-3 {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Hero title and paragraph */
+    .display-3 span p {
+        display: inline;
+    }
+    
+    /* Specifically center hero section on small devices */
+    #home h1, 
+    #home p.lead {
+        text-align: center;
+    }
+    
+    #home .d-flex.gap-3 {
+        margin: 0 auto;
+    }
+}
+
+/* Fix card layout issues */
+.card {
+    height: 100%;
+}
+
+.card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body a.btn {
+    margin-top: auto;
+}

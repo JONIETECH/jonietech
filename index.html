@@ -54,704 +54,661 @@
 </head>
 
 <body>
-    <!-- Add loader wrapper -->
-    <div class="loader-wrapper">
-        <div class="loader-content">
-            <div class="loader"></div>
-            <p>Hi There!</p>
-        </div>
+    <div class="container-fluid loader-wrapper">
+        <div class="loader"></div>
     </div>
 
-    <!-- Wrap all existing content -->
-    <div class="content">
-        <!-- Navigation -->
-        <div class="tagline-section">
-            <p>Boot up for impossibilities</p>
-        </div>
-        <div class="container-main" id="container">
-            <div class="brand">
-                <a href="#home">
-                    <img src="assets/images/logo.png" alt="JonieTech Logo" class="nav-logo">
-                </a>
-            </div>
-
-            <div class="nav-actions">
-                <a href="tel:+256765761948" class="action-btn" title="Call Us">
-                    <i class="bi bi-telephone-fill"></i>
-                </a>
-                <a href="https://wa.me/256765761948" class="action-btn" title="WhatsApp">
-                    <i class="bi bi-whatsapp"></i>
-                </a>
-                <a href="https://github.com/JONIETECH" class="action-btn" title="GitHub">
-                    <i class="bi bi-github"></i>
-                </a>
-            </div>
-
-            <button class="hamburger" id="hamburger-menu" aria-label="Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <div class="navbar" id="navbar-menu">
-                <ul>
-                    <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
-                    <li><a href="#about" class="nav-link" data-page="about">About Us</a></li>
-                    <li><a href="#services" class="nav-link" data-page="services">Our Services</a></li>
-                    <li><a href="#technologies" class="nav-link" data-page="technologies">Technologies</a></li>
-                    <li><a href="#projects" class="nav-link" data-page="projects">Our Projects</a></li>
-                    <li><a href="#contact" class="nav-link" data-page="contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <section id="home" class="section py-md-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="display-3 fw-bold mb-4">Turning Ideas Into <span class="text-primary"><p>Digital Reality</p></span></h1>
-                        <p class="lead mb-4 fs-4">Innovative software solutions that transform your business and drive success in the digital age.</p>
-                        <div class="d-flex gap-3 mt-5">
-                            <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">
-                                <i class="bi bi-rocket-takeoff me-2"></i>Start Your Project
-                            </a>
-                            <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill px-4 py-3">
-                                <i class="bi bi-gear me-2"></i>Our Services
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0">
-                        <div class="position-relative">
-                            <img src="assets/images/smart2.png" alt="Hero Image" class="img-fluid rounded-3 hero-img">
-                            <div class="hero-shape"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section py-md-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h1 class="display-4 text-white mb-4">About JONIETECH</h1>
-                        <p class="lead text-white-50 mb-4">
-                            We are a dynamic tech company specializing in innovative software solutions. Our mission is to transform ideas into powerful digital experiences that drive success for our clients.
-                        </p>
-                        <p class="text-white-50">
-                            Founded in 2019, JONIETECH started with a vision to make quality tech solutions accessible to businesses of all sizes. What began as a small team of passionate developers has grown into a full-service tech company serving clients across Uganda and beyond.
-                        </p>
-                        <div class="d-flex gap-3">
-                            <a href="#contact" class="btn btn-primary btn-lg rounded-pill">
-                                <i class="bi bi-chat-dots me-2"></i>Get in Touch
-                            </a>
-                            <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill">
-                                Our Services
+    <!-- Include the navbar directly instead of using the placeholder -->
+    <div id="navbar-placeholder">
+        <!-- The navbar content will be included directly -->
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="section py-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Turning Ideas Into <span class="text-primary">Digital Reality</span></h1>
+                    <p class="lead mb-4 fs-4">Innovative software solutions that transform your business and drive success in the digital age.</p>
+                    <div class="d-flex gap-3 mt-5">
+                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 py-3">
+                            <i class="bi bi-rocket-takeoff me-2"></i>Start Your Project
                         </a>
-                        </div>
+                        <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill px-4 py-3">
+                            <i class="bi bi-gear me-2"></i>Our Services
+                        </a>
                     </div>
-                    <div class="col-lg-6 mt-5 mt-lg-0">
-                        <div class="contact-card p-4">
-                            <div class="row text-center g-4">
-                                <div class="col-6">
-                                    <div class="feature-card">
-                                        <h3 class="display-4 text-primary mb-2">50+</h3>
-                                        <p class="text-white-50">Projects Completed</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="feature-card">
-                                        <h3 class="display-4 text-primary mb-2">30+</h3>
-                                        <p class="text-white-50">Happy Clients</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="feature-card">
-                                        <h3 class="display-4 text-primary mb-2">5+</h3>
-                                        <p class="text-white-50">Years Experience</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="feature-card">
-                                        <h3 class="display-4 text-primary mb-2">24/7</h3>
-                                        <p class="text-white-50">Support Available</p>
-                        </div>
-                    </div>
-                    </div>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <!-- Our Values Section -->
-        <section class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-6 mb-3">Our Core Values</h3>
-                    <p class="lead text-white-50 mb-4">The principles that guide everything we do</p>
                 </div>
-                <div class="row g-4">
-                    <div class="col-md-3">
-                        <div class="expertise-card p-4 text-center">
-                            <i class="bi bi-star display-4 text-primary mb-3"></i>
-                            <h5 class="text-white mb-3">Excellence</h5>
-                            <p class="text-white-50">Delivering the highest quality in everything we do</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="expertise-card p-4 text-center">
-                            <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
-                            <h5 class="text-white mb-3">Innovation</h5>
-                            <p class="text-white-50">Embracing new ideas and technologies</p>
-                    </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="expertise-card p-4 text-center">
-                            <i class="bi bi-heart display-4 text-primary mb-3"></i>
-                            <h5 class="text-white mb-3">Integrity</h5>
-                            <p class="text-white-50">Being honest and transparent in all dealings</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="expertise-card p-4 text-center">
-                            <i class="bi bi-people display-4 text-primary mb-3"></i>
-                            <h5 class="text-white mb-3">Client Focus</h5>
-                            <p class="text-white-50">Putting our clients' needs first</p>
-                    </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <img src="assets/images/smart2.png" alt="Hero Image" class="img-fluid rounded-3 hero-img">
+                        <div class="hero-shape"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Team Section -->
-        <section class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-6 mb-3">Our Team Leader</h3>
-                    <p class="lead text-white-50 mb-4">Meet the Lead brain behind JONIETECH</p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-4">
-                        <div class="expertise-card p-4 text-center">
-                            <img src="assets/images/smart2.jpg" alt="Jonathan Rwothomio" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
-                            <h5 class="text-white mb-2">RWOTHOMIO JONATHAN</h5>
-                            <p class="text-primary mb-3">Founder & CEO</p>
-                            <p class="text-white-50">Tech enthusiast with 5+ years of experience in software development, Graphics Design and Machine Learning</p>
-                            <div class="social-links mt-3">
-                                <a href="https://linkedin.com/in/jonathanrwothomio" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
-                                <a href="https://twitter.com/joniepro" class="text-primary me-3"><i class="bi bi-twitter"></i></a>
-                                <a href="https://github.com/JONIETECH" class="text-primary"><i class="bi bi-github"></i></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-5 mb-3">Our Services</h3>
-                    <p class="lead text-white-50 mb-4">We provide high-quality solutions tailored to your specific needs.</p>
-                    </div>
-
-                <div class="row g-4 justify-content-center">
-                    <!-- Web Development -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
-                            <div class="card-body text-center p-4">
-                                <i class="bi bi-globe display-4 text-primary mb-4"></i>
-                                <h4 class="mb-3">Web Development</h4>
-                                <p class="text-white-50 mb-4">Custom websites, e-commerce solutions, and web applications built with modern technologies to boost your online presence.</p>
-                                <div class="mt-auto pt-3">
-                                    <span class="badge bg-primary-subtle text-primary me-2">React</span>
-                                    <span class="badge bg-primary-subtle text-primary me-2">Angular</span>
-                                    <span class="badge bg-primary-subtle text-primary">Node.js</span>
-                                </div>
-                                <a href="assets/pages/web.html" class="btn btn-primary mt-3">Learn More</a>
-                        </div>
-                    </div>
-                    </div>
-
-                    <!-- App Development -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
-                            <div class="card-body text-center p-4">
-                                <i class="bi bi-phone display-4 text-primary mb-4"></i>
-                                <h4 class="mb-3">App Development</h4>
-                                <p class="text-white-50 mb-4">Cross-platform mobile applications for iOS and Android with seamless user experience that engage your audience and drive results.</p>
-                                <div class="mt-auto pt-3">
-                                    <span class="badge bg-primary-subtle text-primary me-2">Flutter</span>
-                                    <span class="badge bg-primary-subtle text-primary me-2">React Native</span>
-                                    <span class="badge bg-primary-subtle text-primary">Firebase</span>
-                                </div>
-                                <a href="assets/pages/app.html" class="btn btn-primary mt-3">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Graphics Design -->
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
-                            <div class="card-body text-center p-4">
-                                <i class="bi bi-palette display-4 text-primary mb-4"></i>
-                                <h4 class="mb-3">Graphics Design</h4>
-                                <p class="text-white-50 mb-4">Professional branding, UI/UX design, and marketing materials that capture attention and communicate your brand's unique value proposition.</p>
-                                <div class="mt-auto pt-3">
-                                    <span class="badge bg-primary-subtle text-primary me-2">Branding</span>
-                                    <span class="badge bg-primary-subtle text-primary me-2">UI/UX</span>
-                                    <span class="badge bg-primary-subtle text-primary">Adobe Suite</span>
-                                </div>
-                                <a href="assets/pages/graphics.html" class="btn btn-primary mt-3">Learn More</a>
-                            </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- Technologies Section -->
-        <section id="technologies" class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-5 mb-3">Technologies We Use</h3>
-                    <p class="lead text-white-50 mb-4">Cutting-edge tools and frameworks that power our solutions</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">Frontend</h4>
-                            <p class="text-white-50">React, Angular, Vue.js, Bootstrap</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-server display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">Backend</h4>
-                            <p class="text-white-50">Node.js, Python, PHP, Java</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-phone display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">Mobile</h4>
-                            <p class="text-white-50">React Native, Flutter, Android, iOS</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-cloud display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">Cloud</h4>
-                            <p class="text-white-50">AWS, Azure, Google Cloud, Digital Ocean</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-database display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">Databases</h4>
-                            <p class="text-white-50">MongoDB, MySQL, PostgreSQL, Firebase</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-4">
-                        <div class="expertise-card p-4 text-center h-100">
-                            <i class="bi bi-tools display-4 text-primary mb-3"></i>
-                            <h4 class="text-white mb-3">DevOps</h4>
-                            <p class="text-white-50">Docker, Kubernetes, CI/CD, Git</p>
-                        </div>
+    <!-- About Section -->
+    <section id="about" class="section py-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-white mb-4">About JONIETECH</h1>
+                    <p class="lead text-white-50 mb-4">
+                        We are a dynamic tech company specializing in innovative software solutions. Our mission is to transform ideas into powerful digital experiences that drive success for our clients.
+                    </p>
+                    <p class="text-white-50">
+                        Founded in 2019, JONIETECH started with a vision to make quality tech solutions accessible to businesses of all sizes. What began as a small team of passionate developers has grown into a full-service tech company serving clients across Uganda and beyond.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill">
+                            <i class="bi bi-chat-dots me-2"></i>Get in Touch
+                        </a>
+                        <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill">
+                            Our Services
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-5 mb-4">Our Projects</h3>
-                    <p class="lead text-white-50">Explore our latest projects and success stories</p>
-                </div>
-
-                <div class="row g-4">
-                    <!-- Ivankeyz App -->
-                    <div class="col-md-6">
-                        <div class="work-card">
-                            <img src="assets/images/ivankeyz.jpg" alt="Ivankeyz App" class="img-fluid mb-3">
-                            <div class="work-content p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h5 class="text-white mb-0">Ivankeyz App</h5>
-                                    <a href="https://play.google.com/store/apps/details?id=com.jonietech.Ivankeyz" 
-                                       target="_blank" 
-                                       class="text-primary">
-                                        <i class="bi bi-google-play fs-4"></i>
-                                    </a>
-                                </div>
-                                <p class="text-white-50">A comprehensive mobile application for Ivankeyz, featuring music streaming, event updates, and fan engagement tools.</p>
-                                <div class="tech-stack mb-3">
-                                    <span class="badge bg-primary me-2">Flutter</span>
-                                    <span class="badge bg-primary me-2">Node.js</span>
-                                    <span class="badge bg-primary">Firebase</span>
-                                </div>
-                                <div class="project-stats text-white-50">
-                                    <small>
-                                        <i class="bi bi-download me-2"></i>100+ Downloads
-                                        <i class="bi bi-star-fill ms-3 me-2"></i>4.8 Rating
-                                    </small>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="contact-card p-4">
+                        <div class="row text-center g-4">
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">50+</h3>
+                                    <p class="text-white-50">Projects Completed</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Farmer's Touch -->
-                    <div class="col-md-6">
-                        <div class="work-card">
-                            <img src="assets/images/farmerstouch.png" alt="Farmer's Touch" class="img-fluid mb-3">
-                            <div class="work-content p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h5 class="text-white mb-0">Farmer's Touch App</h5>
-                                    <a href="https://play.google.com/store/apps/details?id=com.agricfarm.farmers_touch" 
-                                       target="_blank" 
-                                       class="text-primary">
-                                        <i class="bi bi-google-play fs-4"></i>
-                                    </a>
-                                </div>
-                                <p class="text-white-50">An innovative agricultural platform connecting farmers with professionals.</p>
-                                <div class="tech-stack mb-3">
-                                    <span class="badge bg-primary me-2">Flutter</span>
-                                    <span class="badge bg-primary me-2">React Native</span>
-                                    <span class="badge bg-primary">Supabase</span>
-                                </div>
-                                <div class="project-stats text-white-50">
-                                    <small>
-                                        <i class="bi bi-download me-2"></i>500+ Downloads
-                                        <i class="bi bi-star-fill ms-3 me-2"></i>4.6 Rating
-                                    </small>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">30+</h3>
+                                    <p class="text-white-50">Happy Clients</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Mlegacy Website -->
-                    <div class="col-md-6">
-                        <div class="work-card">
-                            <img src="assets/images/mlegacy.png" alt="Mlegacy Website" class="img-fluid mb-3">
-                            <div class="work-content p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h5 class="text-white mb-0">Mlegacy Website</h5>
-                                    <a href="https://makylegacy.com" 
-                                       target="_blank" 
-                                       class="text-primary">
-                                        <i class="bi bi-globe fs-4"></i>
-                                    </a>
-                                </div>
-                                <p class="text-white-50">A modern, responsive website showcasing Mlegacy's services and portfolio.</p>
-                                <div class="tech-stack mb-3">
-                                    <span class="badge bg-primary me-2">Html</span>
-                                    <span class="badge bg-primary me-2">Css</span>
-                                    <span class="badge bg-primary">Javascript</span>
-                                </div>
-                                <div class="project-stats text-white-50">
-                                    <small>
-                                        <i class="bi bi-eye me-2"></i>10k+ Monthly Views
-                                        <i class="bi bi-speedometer2 ms-3 me-2"></i>98% Performance
-                                    </small>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">5+</h3>
+                                    <p class="text-white-50">Years Experience</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Lebeclicks Website -->
-                    <div class="col-md-6">
-                        <div class="work-card">
-                            <img src="assets/images/lebee.png" alt="Lebeclicks Website" class="img-fluid mb-3">
-                            <div class="work-content p-4">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <h5 class="text-white mb-0">Lebeclicks Agency Website</h5>
-                                    <a href="https://lebeclicks.com" 
-                                       target="_blank" 
-                                       class="text-primary">
-                                        <i class="bi bi-globe fs-4"></i>
-                                    </a>
-                                </div>
-                                <p class="text-white-50">A sleek, simple and responsive website showcasing Lebeclicks's services and portfolio.</p>
-                                <div class="tech-stack mb-3">
-                                    <span class="badge bg-primary me-2">Html</span>
-                                    <span class="badge bg-primary me-2">Css</span>
-                                    <span class="badge bg-primary">Javascript</span>
-                                </div>
-                                <div class="project-stats text-white-50">
-                                    <small>
-                                        <i class="bi bi-eye me-2"></i>100+ Monthly Views
-                                        <i class="bi bi-speedometer2 ms-3 me-2"></i>91% Performance
-                                    </small>
+                            <div class="col-6">
+                                <div class="feature-card">
+                                    <h3 class="display-4 text-primary mb-2">24/7</h3>
+                                    <p class="text-white-50">Support Available</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section py-md-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h3 class="display-5 mb-3">Get in Touch</h3>
-                    <p class="lead text-white-50 mb-4">Let's discuss how we can help bring your ideas to life</p>
+    <!-- Our Values Section -->
+    <section class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-6 mb-3">Our Core Values</h3>
+                <p class="lead text-white-50 mb-4">The principles that guide everything we do</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-star display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Excellence</h5>
+                        <p class="text-white-50">Delivering the highest quality in everything we do</p>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <div class="expertise-card p-4 p-lg-5">
-                            <h4 class="text-white mb-4">Send Us a Message</h4>
-                            <form>
-                                <div class="mb-4">
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-primary text-primary">
-                                            <i class="bi bi-person"></i>
-                                        </span>
-                                        <input type="text" class="form-control bg-transparent border-primary" placeholder="Your Name" style="color: white !important; caret-color: white;">
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-primary text-primary">
-                                            <i class="bi bi-envelope"></i>
-                                        </span>
-                                        <input type="email" class="form-control bg-transparent border-primary" placeholder="Your Email" style="color: white !important; caret-color: white;">
-                        </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Innovation</h5>
+                        <p class="text-white-50">Embracing new ideas and technologies</p>
                     </div>
-                                <div class="mb-4">
-                                    <div class="input-group">
-                                        <span class="input-group-text bg-transparent border-primary text-primary align-items-start pt-2">
-                                            <i class="bi bi-chat-dots"></i>
-                                        </span>
-                                        <textarea class="form-control bg-transparent border-primary" rows="5" placeholder="Your Message" style="color: white !important; caret-color: white;"></textarea>
-                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-heart display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Integrity</h5>
+                        <p class="text-white-50">Being honest and transparent in all dealings</p>
                     </div>
-                                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">
-                                    <i class="bi bi-send me-2"></i>Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="expertise-card p-4 p-lg-5 h-100">
-                            <h4 class="text-white mb-4">Contact Information</h4>
-                            <ul class="list-unstyled contact-info">
-                                <li class="d-flex align-items-center mb-4">
-                                    <div class="icon-box me-3">
-                                        <i class="bi bi-geo-alt text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white mb-1">Location</h5>
-                                        <p class="text-white-50 mb-0">Kampala, Uganda</p>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center mb-4">
-                                    <div class="icon-box me-3">
-                                        <i class="bi bi-telephone text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white mb-1">Phone</h5>
-                                        <p class="text-white-50 mb-0">
-                                            <a href="tel:+256765761948" class="text-white-50 text-decoration-none">+256 765 761 948</a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center mb-4">
-                                    <div class="icon-box me-3">
-                                        <i class="bi bi-envelope text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white mb-1">Email</h5>
-                                        <p class="text-white-50 mb-0">
-                                            <a href="mailto:info@jonietech.com" class="text-white-50 text-decoration-none">info@jonietech.com</a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="icon-box me-3">
-                                        <i class="bi bi-whatsapp text-primary"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white mb-1">WhatsApp</h5>
-                                        <p class="text-white-50 mb-0">
-                                            <a href="https://wa.me/256765761948" class="text-white-50 text-decoration-none">Message us on WhatsApp</a>
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="social-links mt-4 pt-3 border-top border-primary">
-                                <h5 class="text-white mb-3">Connect With Us</h5>
-                                <a href="https://facebook.com/jonietech" class="social-icon me-3" title="Facebook">
-                                    <i class="bi bi-facebook"></i>
-                                </a>
-                                <a href="https://twitter.com/joniepro" class="social-icon me-3" title="Twitter">
-                                    <i class="bi bi-twitter"></i>
-                                </a>
-                                <a href="https://linkedin.com/in/jonathanrwothomio" class="social-icon me-3" title="LinkedIn">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/JONIETECH" class="social-icon" title="GitHub">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="expertise-card p-4 text-center">
+                        <i class="bi bi-people display-4 text-primary mb-3"></i>
+                        <h5 class="text-white mb-3">Client Focus</h5>
+                        <p class="text-white-50">Putting our clients' needs first</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="container-foot py-5">
-            <div class="container">
-                <div class="row">
-                    <!-- Company Info -->
-                    <div class="col-md-4 mb-4">
-                        <h4 class="text-white mb-4">JONIETECH</h4>
-                        <p class="text-white-50">
-                            Transforming ideas into powerful digital experiences. Your trusted partner for innovative tech solutions.
-                        </p>
+    <!-- Team Section -->
+    <!-- <section class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-6 mb-3">Our Team Leader</h3>
+                <p class="lead text-white-50 mb-4">Meet the Lead brain behind JONIETECH</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="expertise-card p-4 text-center">
+                        <img src="assets/images/smart2.jpg" alt="Jonathan Rwothomio" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h5 class="text-white mb-2">RWOTHOMIO JONATHAN</h5>
+                        <p class="text-primary mb-3">Founder & CEO</p>
+                        <p class="text-white-50">Tech enthusiast with 5+ years of experience in software development, Graphics Design and Machine Learning</p>
                         <div class="social-links mt-3">
-                            <a href="https://facebook.com/jonietech" class="text-primary me-3"><i class="bi bi-facebook"></i></a>
-                            <a href="https://twitter.com/joniepro" class="text-primary me-3"><i class="bi bi-twitter"></i></a>
                             <a href="https://linkedin.com/in/jonathanrwothomio" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://twitter.com/joniepro" class="text-primary me-3"><i class="bi bi-twitter"></i></a>
                             <a href="https://github.com/JONIETECH" class="text-primary"><i class="bi bi-github"></i></a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
-                    <!-- Quick Links and Contact Info in same row on mobile -->
-                    <div class="col-md-8">
-                        <div class="row">
-                            <!-- Quick Links -->
-                            <div class="col-6 mb-4">
-                                <h4 class="text-white mb-4">Quick Links</h4>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2">
-                                        <a href="#services" class="text-white-50 text-decoration-none">
-                                            <i class="bi bi-chevron-right text-primary me-2"></i>Our Services
-                                        </a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#projects" class="text-white-50 text-decoration-none">
-                                            <i class="bi bi-chevron-right text-primary me-2"></i>Portfolio
-                                        </a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#about" class="text-white-50 text-decoration-none">
-                                            <i class="bi bi-chevron-right text-primary me-2"></i>About Us
-                                        </a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <a href="#contact" class="text-white-50 text-decoration-none">
-                                            <i class="bi bi-chevron-right text-primary me-2"></i>Contact Us
-                                        </a>
-                                    </li>
-                                </ul>
+    <!-- Services Section -->
+    <section id="services" class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-5 mb-3">Our Services</h3>
+                <p class="lead text-white-50 mb-4">We provide high-quality solutions tailored to your specific needs.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Web Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-globe display-4 text-primary mb-4"></i>
+                            <h4 class="mb-3">Web Development</h4>
+                            <p class="text-white-50 mb-4">Custom websites, e-commerce solutions, and web applications built with modern technologies to boost your online presence.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="badge bg-primary-subtle text-primary me-2">React</span>
+                                <span class="badge bg-primary-subtle text-primary me-2">Angular</span>
+                                <span class="badge bg-primary-subtle text-primary">Node.js</span>
                             </div>
+                            <a href="assets/pages/web.html" class="btn btn-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- Contact Info -->
-                            <div class="col-6 mb-4">
-                                <h4 class="text-white mb-4">Contact Us</h4>
-                                <ul class="list-unstyled text-white-50">
-                                    <li class="mb-2">
-                                        <i class="bi bi-geo-alt text-primary me-2"></i>
-                                        Kampala, Uganda
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-telephone text-primary me-2"></i>
-                                        <a href="tel:+256765761948" class="text-white-50 text-decoration-none">+256 765 761 948</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-envelope text-primary me-2"></i>
-                                        <a href="mailto:info@jonietech.com" class="text-white-50 text-decoration-none">info@jonietech.com</a>
-                                    </li>
-                                    <li class="mb-2">
-                                        <i class="bi bi-whatsapp text-primary me-2"></i>
-                                        <a href="https://wa.me/256765761948" class="text-white-50 text-decoration-none">WhatsApp</a>
-                                    </li>
-                                </ul>
+                <!-- App Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-phone display-4 text-primary mb-4"></i>
+                            <h4 class="mb-3">App Development</h4>
+                            <p class="text-white-50 mb-4">Cross-platform mobile applications for iOS and Android with seamless user experience that engage your audience and drive results.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="badge bg-primary-subtle text-primary me-2">Flutter</span>
+                                <span class="badge bg-primary-subtle text-primary me-2">React Native</span>
+                                <span class="badge bg-primary-subtle text-primary">Firebase</span>
+                            </div>
+                            <a href="assets/pages/app.html" class="btn btn-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphics Design -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card web-card border-0 border-bottom border-primary shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-palette display-4 text-primary mb-4"></i>
+                            <h4 class="mb-3">Graphics Design</h4>
+                            <p class="text-white-50 mb-4">Professional branding, UI/UX design, and marketing materials that capture attention and communicate your brand's unique value proposition.</p>
+                            <div class="mt-auto pt-3">
+                                <span class="badge bg-primary-subtle text-primary me-2">Branding</span>
+                                <span class="badge bg-primary-subtle text-primary me-2">UI/UX</span>
+                                <span class="badge bg-primary-subtle text-primary">Adobe Suite</span>
+                            </div>
+                            <a href="assets/pages/graphics.html" class="btn btn-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-5 mb-3">Technologies We Use</h3>
+                <p class="lead text-white-50 mb-4">Cutting-edge tools and frameworks that power our solutions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">Frontend</h4>
+                        <p class="text-white-50">React, Angular, Vue.js, Bootstrap</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-server display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">Backend</h4>
+                        <p class="text-white-50">Node.js, Python, PHP, Java</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">Mobile</h4>
+                        <p class="text-white-50">React Native, Flutter, Android, iOS</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-cloud display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">Cloud</h4>
+                        <p class="text-white-50">AWS, Azure, Google Cloud, Digital Ocean</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-database display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">Databases</h4>
+                        <p class="text-white-50">MongoDB, MySQL, PostgreSQL, Firebase</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="expertise-card p-4 text-center h-100">
+                        <i class="bi bi-tools display-4 text-primary mb-3"></i>
+                        <h4 class="text-white mb-3">DevOps</h4>
+                        <p class="text-white-50">Docker, Kubernetes, CI/CD, Git</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-5 mb-4">Our Projects</h3>
+                <p class="lead text-white-50">Explore our latest projects and success stories</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Ivankeyz App -->
+                <div class="col-md-6">
+                    <div class="work-card">
+                        <img src="assets/images/ivankeyz.jpg" alt="Ivankeyz App" class="img-fluid mb-3">
+                        <div class="work-content p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="text-white mb-0">Ivankeyz App</h5>
+                                <a href="https://play.google.com/store/apps/details?id=com.jonietech.Ivankeyz" 
+                                   target="_blank" 
+                                   class="text-primary">
+                                    <i class="bi bi-google-play fs-4"></i>
+                                </a>
+                            </div>
+                            <p class="text-white-50">A comprehensive mobile application for Ivankeyz, featuring music streaming, event updates, and fan engagement tools.</p>
+                            <div class="tech-stack mb-3">
+                                <span class="badge bg-primary me-2">Flutter</span>
+                                <span class="badge bg-primary me-2">Node.js</span>
+                                <span class="badge bg-primary">Firebase</span>
+                            </div>
+                            <div class="project-stats text-white-50">
+                                <small>
+                                    <i class="bi bi-download me-2"></i>100+ Downloads
+                                    <i class="bi bi-star-fill ms-3 me-2"></i>4.8 Rating
+                                </small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Copyright -->
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <hr class="border-primary">
-                        <p class="text-center text-white-50 mb-0">
-                            © 2025 JONIETECH. All rights reserved.
-                        </p>
+                <!-- Farmer's Touch -->
+                <div class="col-md-6">
+                    <div class="work-card">
+                        <img src="assets/images/farmerstouch.png" alt="Farmer's Touch" class="img-fluid mb-3">
+                        <div class="work-content p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="text-white mb-0">Farmer's Touch App</h5>
+                                <a href="https://play.google.com/store/apps/details?id=com.agricfarm.farmers_touch" 
+                                   target="_blank" 
+                                   class="text-primary">
+                                    <i class="bi bi-google-play fs-4"></i>
+                                </a>
+                            </div>
+                            <p class="text-white-50">An innovative agricultural platform connecting farmers with professionals.</p>
+                            <div class="tech-stack mb-3">
+                                <span class="badge bg-primary me-2">Flutter</span>
+                                <span class="badge bg-primary me-2">React Native</span>
+                                <span class="badge bg-primary">Supabase</span>
+                            </div>
+                            <div class="project-stats text-white-50">
+                                <small>
+                                    <i class="bi bi-download me-2"></i>500+ Downloads
+                                    <i class="bi bi-star-fill ms-3 me-2"></i>4.6 Rating
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mlegacy Website -->
+                <div class="col-md-6">
+                    <div class="work-card">
+                        <img src="assets/images/mlegacy.png" alt="Mlegacy Website" class="img-fluid mb-3">
+                        <div class="work-content p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="text-white mb-0">Mlegacy Website</h5>
+                                <a href="https://makylegacy.com" 
+                                   target="_blank" 
+                                   class="text-primary">
+                                    <i class="bi bi-globe fs-4"></i>
+                                </a>
+                            </div>
+                            <p class="text-white-50">A modern, responsive website showcasing Mlegacy's services and portfolio.</p>
+                            <div class="tech-stack mb-3">
+                                <span class="badge bg-primary me-2">Html</span>
+                                <span class="badge bg-primary me-2">Css</span>
+                                <span class="badge bg-primary">Javascript</span>
+                            </div>
+                            <div class="project-stats text-white-50">
+                                <small>
+                                    <i class="bi bi-eye me-2"></i>10k+ Monthly Views
+                                    <i class="bi bi-speedometer2 ms-3 me-2"></i>98% Performance
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lebeclicks Website -->
+                <div class="col-md-6">
+                    <div class="work-card">
+                        <img src="assets/images/lebee.png" alt="Lebeclicks Website" class="img-fluid mb-3">
+                        <div class="work-content p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="text-white mb-0">Lebeclicks Agency Website</h5>
+                                <a href="https://lebeclicks.com" 
+                                   target="_blank" 
+                                   class="text-primary">
+                                    <i class="bi bi-globe fs-4"></i>
+                                </a>
+                            </div>
+                            <p class="text-white-50">A sleek, simple and responsive website showcasing Lebeclicks's services and portfolio.</p>
+                            <div class="tech-stack mb-3">
+                                <span class="badge bg-primary me-2">Html</span>
+                                <span class="badge bg-primary me-2">Css</span>
+                                <span class="badge bg-primary">Javascript</span>
+                            </div>
+                            <div class="project-stats text-white-50">
+                                <small>
+                                    <i class="bi bi-eye me-2"></i>100+ Monthly Views
+                                    <i class="bi bi-speedometer2 ms-3 me-2"></i>91% Performance
+                                </small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-            // Load navbar functionality
-            const hamburger = document.getElementById('hamburger-menu');
-            const navbar = document.getElementById('navbar-menu');
-            const container = document.getElementById('container');
+    <!-- Contact Section -->
+    <section id="contact" class="section py-md-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h3 class="display-5 mb-3">Get in Touch</h3>
+                <p class="lead text-white-50 mb-4">Let's discuss how we can help bring your ideas to life</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="expertise-card p-4 p-lg-5">
+                        <h4 class="text-white mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-primary text-primary">
+                                        <i class="bi bi-person"></i>
+                                    </span>
+                                    <input type="text" class="form-control bg-transparent border-primary" placeholder="Your Name" style="color: white !important; caret-color: white;">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-primary text-primary">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+                                    <input type="email" class="form-control bg-transparent border-primary" placeholder="Your Email" style="color: white !important; caret-color: white;">
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-transparent border-primary text-primary align-items-start pt-2">
+                                        <i class="bi bi-chat-dots"></i>
+                                    </span>
+                                    <textarea class="form-control bg-transparent border-primary" rows="5" placeholder="Your Message" style="color: white !important; caret-color: white;"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg rounded-pill px-4">
+                                <i class="bi bi-send me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="expertise-card p-4 p-lg-5 h-100">
+                        <h4 class="text-white mb-4">Contact Information</h4>
+                        <ul class="list-unstyled contact-info">
+                            <li class="d-flex align-items-center mb-4">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-geo-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-1">Location</h5>
+                                    <p class="text-white-50 mb-0">Kampala, Uganda</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-telephone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-1">Phone</h5>
+                                    <p class="text-white-50 mb-0">
+                                        <a href="tel:+256765761948" class="text-white-50 text-decoration-none">+256 765 761 948</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-1">Email</h5>
+                                    <p class="text-white-50 mb-0">
+                                        <a href="mailto:info@jonietech.com" class="text-white-50 text-decoration-none">info@jonietech.com</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="icon-box me-3">
+                                    <i class="bi bi-whatsapp text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-white mb-1">WhatsApp</h5>
+                                    <p class="text-white-50 mb-0">
+                                        <a href="https://wa.me/256765761948" class="text-white-50 text-decoration-none">Message us on WhatsApp</a>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="social-links mt-4 pt-3 border-top border-primary">
+                            <h5 class="text-white mb-3">Connect With Us</h5>
+                            <a href="https://facebook.com/jonietech" class="social-icon me-3" title="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/joniepro" class="social-icon me-3" title="Twitter">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/jonathanrwothomio" class="social-icon me-3" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/JONIETECH" class="social-icon" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            hamburger.addEventListener('click', () => {
-                navbar.classList.toggle('active');
-                container.classList.toggle('active');
-            });
+    <!-- Footer -->
+    <footer class="container-foot py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-4 mb-4">
+                    <h4 class="text-white mb-4">JONIETECH</h4>
+                    <p class="text-white-50">
+                        Transforming ideas into powerful digital experiences. Your trusted partner for innovative tech solutions.
+                    </p>
+                    <div class="social-links mt-3">
+                        <a href="https://facebook.com/jonietech" class="text-primary me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/joniepro" class="text-primary me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="https://linkedin.com/in/jonathanrwothomio" class="text-primary me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/JONIETECH" class="text-primary"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
 
-            // Close navbar when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                <!-- Quick Links and Contact Info in same row on mobile -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Quick Links -->
+                        <div class="col-6 mb-4">
+                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#services" class="text-white-50 text-decoration-none">
+                                        <i class="bi bi-chevron-right text-primary me-2"></i>Our Services
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#projects" class="text-white-50 text-decoration-none">
+                                        <i class="bi bi-chevron-right text-primary me-2"></i>Portfolio
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#about" class="text-white-50 text-decoration-none">
+                                        <i class="bi bi-chevron-right text-primary me-2"></i>About Us
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#contact" class="text-white-50 text-decoration-none">
+                                        <i class="bi bi-chevron-right text-primary me-2"></i>Contact Us
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-6 mb-4">
+                            <h4 class="text-white mb-4">Contact Us</h4>
+                            <ul class="list-unstyled text-white-50">
+                                <li class="mb-2">
+                                    <i class="bi bi-geo-alt text-primary me-2"></i>
+                                    Kampala, Uganda
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-telephone text-primary me-2"></i>
+                                    <a href="tel:+256765761948" class="text-white-50 text-decoration-none">+256 765 761 948</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-envelope text-primary me-2"></i>
+                                    <a href="mailto:info@jonietech.com" class="text-white-50 text-decoration-none">info@jonietech.com</a>
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-whatsapp text-primary me-2"></i>
+                                    <a href="https://wa.me/256765761948" class="text-white-50 text-decoration-none">WhatsApp</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <hr class="border-primary">
+                    <p class="text-center text-white-50 mb-0">
+                        © 2025 JONIETECH. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Load navbar functionality
+        const hamburger = document.getElementById('hamburger-menu');
+        const navbar = document.getElementById('navbar-menu');
+        const container = document.getElementById('container');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            container.classList.toggle('active');
+        });
+
+        // Close navbar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                navbar.classList.remove('active');
+                container.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll to sections
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                    // Close mobile menu after clicking
                     navbar.classList.remove('active');
                     container.classList.remove('active');
                 }
             });
+        });
 
-            // Smooth scroll to sections
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth' });
-                        // Close mobile menu after clicking
-                        navbar.classList.remove('active');
-                        container.classList.remove('active');
-                    }
-                });
+        // Add active class to current section
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight/3)) {
+                    current = section.getAttribute('id');
+                }
             });
 
-            // Add active class to current section
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            window.addEventListener('scroll', () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - sectionHeight/3)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-                    });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
             });
-        </script>
+        });
+    });
+    </script>
 </body>
 
 </html>
