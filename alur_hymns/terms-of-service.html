@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Alur Hymns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        :root {
+            --orange: #F26419;
+            --dark-blue: #160C28;
+            --light-beige: #F8F3F2;
+            --white: #FFFFFF;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Barlow', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            background-color: var(--light-beige);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--orange);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--dark-blue);
+            text-decoration: underline;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--orange);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 2px solid var(--orange);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--orange);
+            text-decoration: none;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--light-beige);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light-beige);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        .main-content {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .terms-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--light-beige);
+            padding-bottom: 20px;
+        }
+        
+        .terms-content {
+            margin-bottom: 30px;
+        }
+        
+        .terms-content ul, .terms-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .terms-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-button {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--light-beige);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-beige);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/3010d94d2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="icon.png" alt="Alur Hymns Logo">
+                    <h1>Alur Hymns</h1>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#screenshots">Screenshots</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#support">Support</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <div class="terms-header">
+                <h1>Terms of Service</h1>
+                <p>Last updated: April 14, 2025</p>
+            </div>
+            
+            <div class="terms-content">
+                <p>Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Alur Hymns application ("the App") operated by the Alur Hymns Team ("we", "us", or "our").</p>
+                
+                <p>Your access to and use of the App is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the App.</p>
+                
+                <p>By accessing or using the App, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the App.</p>
+                
+                <h2>Use License</h2>
+                <p>Permission is granted to download and use the Alur Hymns application on your personal devices. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <ul>
+                    <li>Modify or copy the materials except as required for normal App operation;</li>
+                    <li>Use the materials for any commercial purpose;</li>
+                    <li>Attempt to decompile or reverse engineer any software contained in the App;</li>
+                    <li>Remove any copyright or other proprietary notations from the materials; or</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server.</li>
+                </ul>
+                
+                <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by us at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.</p>
+                
+                <h2>Content and Copyright</h2>
+                <p>The hymns, translations, and other religious content provided through the App are intended for personal, non-commercial use. The content is protected by copyright and other intellectual property laws.</p>
+                
+                <p>While you are free to use the content for personal worship and religious activities, you may not:</p>
+                <ul>
+                    <li>Republish, sell, rent, or sub-license the content;</li>
+                    <li>Reproduce, duplicate, or copy material from the App for commercial purposes;</li>
+                    <li>Redistribute content from the App (unless content is specifically made for redistribution).</li>
+                </ul>
+                
+                <h2>User-Generated Content</h2>
+                <p>In the event that the App allows users to post content or feedback:</p>
+                <p>You retain all your ownership rights to any content you submit. However, by submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, adapt, publish, and distribute such content in connection with the App.</p>
+                
+                <p>You agree not to post content that:</p>
+                <ul>
+                    <li>Is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, or invasive of another's privacy;</li>
+                    <li>Infringes on copyrights, trademarks, or other intellectual property rights;</li>
+                    <li>Contains software viruses or any other computer code designed to interfere with the functionality of the App;</li>
+                    <li>Constitutes unauthorized or unsolicited advertising, promotional materials, or any other form of solicitation.</li>
+                </ul>
+                
+                <h2>Disclaimers</h2>
+                <ol>
+                    <li>The App is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, and hereby disclaim all warranties including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
+                    <li>We do not warrant that the App will be uninterrupted or error-free, that defects will be corrected, or that the App is free of viruses or other harmful components.</li>
+                    <li>We do not guarantee the accuracy, completeness, or reliability of any content provided through the App, including scriptural texts, hymn lyrics, or translations.</li>
+                </ol>
+                
+                <h2>Limitation of Liability</h2>
+                <p>In no event shall we be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the App, even if we have been notified orally or in writing of the possibility of such damage.</p>
+                
+                <h2>Updates and Changes</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. The most current version will be available on the App's website. By continuing to access or use the App after those revisions become effective, you agree to be bound by the revised terms.</p>
+                
+                <p>We also reserve the right to update, modify, or discontinue the App or any features of the App at any time, with or without notice to you.</p>
+                
+                <h2>Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws, without regard to its conflict of law provisions.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:legal@jonietech.com">legal@jonietech.com</a></p>
+            </div>
+            
+            <div class="back-button">
+                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Alur Hymns. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                
+                // Change icon based on menu state
+                const icon = mobileMenuBtn.querySelector('i');
+                if (navLinks.style.display === 'flex') {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Handle responsive menu on window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    navLinks.style.display = 'flex';
+                } else if (!navLinks.classList.contains('active')) {
+                    navLinks.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

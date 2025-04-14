@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Alur Hymns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        :root {
+            --orange: #F26419;
+            --dark-blue: #160C28;
+            --light-beige: #F8F3F2;
+            --white: #FFFFFF;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Barlow', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-blue);
+            background-color: var(--light-beige);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--orange);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--dark-blue);
+            margin-top: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--dark-blue);
+            text-decoration: underline;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--orange);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 2px solid var(--orange);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--orange);
+            text-decoration: none;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--light-beige);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light-beige);
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--orange);
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        .main-content {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--light-beige);
+            padding-bottom: 20px;
+        }
+        
+        .privacy-content {
+            margin-bottom: 30px;
+        }
+        
+        .privacy-content ul, .privacy-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-button {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--light-beige);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--light-beige);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: var(--dark-blue);
+            padding: 20px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+        }
+        
+        .mobile-nav.active {
+            display: block;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+        }
+        
+        .mobile-nav li {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .mobile-nav a {
+            color: var(--light-beige);
+            font-weight: 500;
+            font-size: 1.2rem;
+            display: block;
+            padding: 10px;
+        }
+        
+        .mobile-nav a:hover {
+            color: var(--orange);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 30px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .main-content {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .main-content {
+                padding: 20px;
+                margin: 30px 0;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .privacy-header {
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 1.5rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+            }
+            
+            .privacy-content ul, .privacy-content ol {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/3010d94d2f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="icon.png" alt="Alur Hymns Logo">
+                    <h1>Alur Hymns</h1>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#screenshots">Screenshots</a></li>
+                    <li><a href="index.html#download">Download</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#support">Support</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="main-content">
+            <div class="privacy-header">
+                <h1>Privacy Policy</h1>
+                <p>Last updated: April 14, 2025</p>
+            </div>
+            
+            <div class="privacy-content">
+                <p>Thank you for choosing to use the Alur Hymns app. We are committed to protecting your personal information and your right to privacy. This Privacy Policy describes how we collect, use, and share information when you use our application.</p>
+                
+                <h2>Information We Collect</h2>
+                <p>When you use Alur Hymns, we may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> We do not collect any personally identifiable information unless you voluntarily provide it to us (such as when contacting support).</li>
+                    <li><strong>Usage Data:</strong> We may collect anonymous usage statistics to help improve the app, including which features you use most frequently and app performance metrics.</li>
+                    <li><strong>Device Information:</strong> Basic information about your device such as device type, operating system version, and unique device identifiers for analytics purposes.</li>
+                </ul>
+                
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve the Alur Hymns app</li>
+                    <li>Develop new features and functionality</li>
+                    <li>Monitor app performance and fix bugs</li>
+                    <li>Respond to your requests and support needs</li>
+                    <li>Understand how users interact with our app to make it better</li>
+                </ul>
+                
+                <h2>Data Storage and User Preferences</h2>
+                <p>The app stores your preferences (such as theme settings, font size, and favorites) locally on your device. This information is not transmitted to our servers and remains on your device unless you uninstall the app.</p>
+                
+                <h2>Sharing Your Information</h2>
+                <p>We do not sell, trade, or otherwise transfer your information to outside parties. We may share anonymous, aggregated information (that cannot identify you) with trusted third parties who assist us in operating our application, conducting our business, or servicing you.</p>
+                
+                <h2>Third-Party Services</h2>
+                <p>The app may use third-party services that collect information used to identify you:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> We use Google Analytics to help us understand how our app is used. This service may collect information such as how often you use the application and performance data.</li>
+                    <li><strong>Google Play Services:</strong> For Android users, Google Play Services may collect device information for the purpose of providing updates and usage statistics.</li>
+                </ul>
+                
+                <h2>Advertising</h2>
+                <p>The Alur Hymns app may display advertisements provided by Google AdMob. AdMob may use device identifiers and location data to serve personalized ads. You can manage your ad preferences through your device settings or Google account.</p>
+                
+                <h2>Children's Privacy</h2>
+                <p>Our app does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take necessary actions.</p>
+                
+                <h2>Security</h2>
+                <p>We value your trust in providing us your information, thus we strive to use commercially acceptable means of protecting it. However, no method of transmission over the internet or electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+                
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+                
+                <h2>Contact Us</h2>
+                <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:privacy@jonietech.com">privacy@jonietech.com</a></p>
+            </div>
+            
+            <div class="back-button">
+                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2025 Alur Hymns. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            
+            // Toggle mobile menu
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking a link
+            const mobileLinks = document.querySelectorAll('.mobile-nav a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                });
+            });
+            
+            // Close mobile menu when scrolling
+            window.addEventListener('scroll', function() {
+                if (mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
