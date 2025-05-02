@@ -156,27 +156,62 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        // Fetch and insert the navbar
-        fetch('../pages/navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
-                
-                // Add event listeners after navbar is loaded
-                var toggle = document.getElementById("toggle");
-                var container_maine = document.getElementById("container");
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fetch and insert the navbar
+            fetch('../pages/navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    
+                    // Initialize navbar functionality after loading
+                    const hamburger = document.getElementById('hamburger-menu');
+                    const navbar = document.getElementById('navbar-menu');
+                    const container = document.getElementById('container');
+                    const navLinks = document.querySelectorAll('.nav-link');
 
-                toggle.onclick = function() {
-                    container_maine.classList.toggle('active');
-                }
-            });
+                    if (hamburger && navbar && container) {
+                        hamburger.addEventListener('click', () => {
+                            navbar.classList.toggle('active');
+                            container.classList.toggle('active');
+                        });
 
-        // Fetch and insert the footer
-        fetch('../pages/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-placeholder').innerHTML = data;
-            });
+                        // Close navbar when clicking outside
+                        document.addEventListener('click', (e) => {
+                            if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+                                navbar.classList.remove('active');
+                                container.classList.remove('active');
+                            }
+                        });
+
+                        // Handle navigation
+                        navLinks.forEach(link => {
+                            link.addEventListener('click', (e) => {
+                                e.preventDefault();
+                                const targetId = link.getAttribute('href');
+                                
+                                if (targetId === '/') {
+                                    // Navigate to home
+                                    window.location.href = '/';
+                                } else if (targetId.startsWith('/#')) {
+                                    // Navigate to section on main page
+                                    window.location.href = targetId;
+                                }
+                                
+                                // Close mobile menu
+                                navbar.classList.remove('active');
+                                container.classList.remove('active');
+                            });
+                        });
+                    }
+                });
+
+            // Fetch and insert the footer
+            fetch('../pages/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
     </script>
 </body>
 

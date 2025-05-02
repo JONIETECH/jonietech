@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/services/service-5/assets/css/service-5.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>JONIETECH - IT Solutions</title>
     <script src="assets/js/loader.js" defer></script>
     <script src="assets/js/nav.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <meta name="description" content="JONIETECH - Professional web development, mobile app development, and IT services company. We create custom solutions for businesses with expertise in React, Flutter, Node.js and more.">
     <meta name="keywords" content="web development, app development, IT services, software development, Uganda tech company, JONIETECH">
     <meta name="author" content="JONIETECH">
@@ -148,32 +150,32 @@
     <section class="section py-md-5">
         <div class="container">
             <div class="text-center mb-5">
-                <h3 class="display-6 mb-3">Our Core Values</h3>
-                <p class="lead text-white-50 mb-4">The principles that guide everything we do</p>
+                <h3 class="display-6 mb-3" data-aos="fade-up">Our Core Values</h3>
+                <p class="lead text-white-50 mb-4" data-aos="fade-up" data-aos-delay="100">The principles that guide everything we do</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="expertise-card p-4 text-center">
                         <i class="bi bi-star display-4 text-primary mb-3"></i>
                         <h5 class="text-white mb-3">Excellence</h5>
                         <p class="text-white-50">Delivering the highest quality in everything we do</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="expertise-card p-4 text-center">
                         <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
                         <h5 class="text-white mb-3">Innovation</h5>
                         <p class="text-white-50">Embracing new ideas and technologies</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="expertise-card p-4 text-center">
                         <i class="bi bi-heart display-4 text-primary mb-3"></i>
                         <h5 class="text-white mb-3">Integrity</h5>
                         <p class="text-white-50">Being honest and transparent in all dealings</p>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
                     <div class="expertise-card p-4 text-center">
                         <i class="bi bi-people display-4 text-primary mb-3"></i>
                         <h5 class="text-white mb-3">Client Focus</h5>
@@ -736,62 +738,69 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-        // Load navbar functionality
-        const hamburger = document.getElementById('hamburger-menu');
-        const navbar = document.getElementById('navbar-menu');
-        const container = document.getElementById('container');
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true
+            });
+            
+            // Load navbar functionality
+            const hamburger = document.getElementById('hamburger-menu');
+            const navbar = document.getElementById('navbar-menu');
+            const container = document.getElementById('container');
 
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-            container.classList.toggle('active');
-        });
+            hamburger.addEventListener('click', () => {
+                navbar.classList.toggle('active');
+                container.classList.toggle('active');
+            });
 
-        // Close navbar when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
-                navbar.classList.remove('active');
-                container.classList.remove('active');
-            }
-        });
-
-        // Smooth scroll to sections
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu after clicking
+            // Close navbar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
                     navbar.classList.remove('active');
                     container.classList.remove('active');
                 }
             });
-        });
 
-        // Add active class to current section
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight/3)) {
-                    current = section.getAttribute('id');
-                }
+            // Smooth scroll to sections
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        // Close mobile menu after clicking
+                        navbar.classList.remove('active');
+                        container.classList.remove('active');
+                    }
+                });
             });
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+            // Add active class to current section
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - sectionHeight/3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
             });
         });
-    });
     </script>
 </body>
 

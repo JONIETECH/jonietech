@@ -28,11 +28,11 @@
 
     <div class="navbar" id="navbar-menu">
         <ul>
-            <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
-            <li><a href="#services" class="nav-link" data-page="services">Our Services</a></li>
-            <li><a href="#technologies" class="nav-link" data-page="technologies">Technologies</a></li>
-            <li><a href="#projects" class="nav-link" data-page="projects">Our Projects</a></li>
-            <li><a href="#contact" class="nav-link" data-page="contact">Contact Us</a></li>
+            <li><a href="/#home" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="/#services" class="nav-link" data-page="services">Our Services</a></li>
+            <li><a href="/#technologies" class="nav-link" data-page="technologies">Technologies</a></li>
+            <li><a href="/#projects" class="nav-link" data-page="projects">Our Projects</a></li>
+            <li><a href="/#contact" class="nav-link" data-page="contact">Contact Us</a></li>
         </ul>
     </div>
 </div>
@@ -43,6 +43,19 @@
         const hamburger = document.getElementById('hamburger-menu');
         const navbar = document.getElementById('navbar-menu');
         const container = document.getElementById('container');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Update links based on current page
+        const currentPath = window.location.pathname;
+        const isServicePage = currentPath.includes('/assets/pages/');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (isServicePage) {
+                // If we're on a service page, update the link to point to the root
+                link.setAttribute('href', `/${href.split('#')[1] ? '#' + href.split('#')[1] : ''}`);
+            }
+        });
 
         hamburger.addEventListener('click', () => {
             navbar.classList.toggle('active');
@@ -58,24 +71,32 @@
         });
 
         // Smooth scroll to sections
-        document.querySelectorAll('.nav-link').forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
                 
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                    // Close mobile menu after clicking
-                    navbar.classList.remove('active');
-                    container.classList.remove('active');
+                if (targetId === '/') {
+                    // If it's the home link, navigate to the root
+                    window.location.href = '/';
+                } else if (targetId.startsWith('/#')) {
+                    // If it's a section link, navigate to the root with the section
+                    window.location.href = targetId;
+                } else {
+                    // Otherwise, smooth scroll to the section
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        // Close mobile menu after clicking
+                        navbar.classList.remove('active');
+                        container.classList.remove('active');
+                    }
                 }
             });
         });
 
         // Add active class to current section
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
 
         window.addEventListener('scroll', () => {
             let current = '';
@@ -89,7 +110,8 @@
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
+                const href = link.getAttribute('href');
+                if (href.includes(current)) {
                     link.classList.add('active');
                 }
             });
