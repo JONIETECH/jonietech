@@ -41,7 +41,7 @@
 ## 🚀 Tech Stack
 
 - **Languages:** JavaScript, Python, Dart
-- **Frameworks:** Flutter, React, Node.js
+- **Frameworks:** Flutter, React, Express.js, Next.js, Django
 - **Design:** Figma, Adobe XD, Illustrator, Photoshop
 - **Music:** Ableton, FL Studio, Pro Tools
 
