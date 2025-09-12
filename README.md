@@ -69,7 +69,3 @@
 - 🌱 Always learning || Always coding || Always perfecting my craft
 
 ---
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e90ff,100:ffd700&height=120&section=footer"/>
-</p>
