@@ -9,7 +9,7 @@
 <p align="center">
   <b>Finalist Computer Science Student @ Makerere University</b><br/>
   <b>Web & Mobile Developer | Software Engineer | UI/UX Perfectionist | Graphics Designer</b><br/>
-  <b>Gospel Music Producer | Guitarist | Keyboardist</b>
+  <b>Gospel Music Producer</b>
 </p>
 
 ---
@@ -32,7 +32,6 @@
 - 🎓 Finalist Computer Science student at Makerere University
 - 💻 Web & mobile app developer, software engineer
 - 🎨 UI/UX perfectionist & graphics designer
-- 🎶 Gospel music producer | Guitar & keyboard player
 - 🌍 Passionate about building elegant digital experiences
 ```
 
@@ -43,7 +42,6 @@
 - **Languages:** JavaScript, Python, Dart
 - **Frameworks:** Flutter, React, Express.js, Next.js, Django
 - **Design:** Figma, Adobe XD, Illustrator, Photoshop
-- **Music:** Ableton, FL Studio, Pro Tools
 
 ---
 <!-- Add your favorite projects below! 
