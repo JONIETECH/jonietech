@@ -35,15 +35,6 @@
 - 🌍 Passionate about building elegant digital experiences
 ```
 
----
-
-## 🚀 Tech Stack
-
-- **Languages:** JavaScript, Python, Dart
-- **Frameworks:** Flutter, React, Express.js, Next.js, Django
-- **Design:** Figma, Adobe XD, Illustrator, Photoshop
-
----
 <!-- Add your favorite projects below! 
 ## 🌟 Featured Projects
 - [Project 1 Title](https://github.com/JONIETECH/project1) – Cool description about the project.
