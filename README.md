@@ -1,7 +1,7 @@
 <!-- Profile README for JONIETECH -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/JONIETECH/jonietech/refs/heads/main/passport.jpg" alt="JONIETECH Logo" width="120"/>
+  <img src="https://raw.githubusercontent.com/JONIETECH/jonietech/refs/heads/main/smart2.jpg" alt="JONIETECH Logo" width="120"/>
 </p>
 
 <h1 align="center">Hey there! I'm RWOTHOMIO JONATHAN 👋</h1>
