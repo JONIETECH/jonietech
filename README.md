@@ -4,12 +4,11 @@
   <img src="https://raw.githubusercontent.com/JONIETECH/jonietech/refs/heads/main/smart2.jpg" alt="JONIETECH Logo" width="120"/>
 </p>
 
-<h1 align="center">Hey there! I'm RWOTHOMIO JONATHAN 👋</h1>
+<h1 align="center">RWOTHOMIO JONATHAN</h1>
 
 <p align="center">
   <b>Finalist Computer Science Student @ Makerere University</b><br/>
   <b>Web & Mobile Developer | Software Engineer | UI/UX Perfectionist | Graphics Designer</b><br/>
-  <b>Gospel Music Producer</b>
 </p>
 
 ---
@@ -26,14 +25,6 @@
 
 ---
 
-## 👨‍💻 About Me
-
-```yaml
-- 🎓 Finalist Computer Science student at Makerere University
-- 💻 Web & mobile app developer, software engineer
-- 🎨 UI/UX perfectionist & graphics designer
-- 🌍 Passionate about building elegant digital experiences
-```
 
 <!-- Add your favorite projects below! 
 ## 🌟 Featured Projects
@@ -45,16 +36,9 @@
 ## 📫 Connect with Me
 
 <p align="center">
-  <a href="https://jonietech.com"><img src="https://img.shields.io/badge/Website-jonietech.com-1e90ff?style=for-the-badge" /></a>
-  <a href="mailto:info@jonietech.com"><img src="https://img.shields.io/badge/Email-info@jonietech.com-d14836?style=for-the-badge" /></a>
+  <a href="https://jonietech.dev"><img src="https://img.shields.io/badge/Website-jonietech.dev-1e90ff?style=for-the-badge" /></a>
+  <a href="mailto:jonietech.ug@gmail.com"><img src="https://img.shields.io/badge/Email-info@jonietech.com-d14836?style=for-the-badge" /></a>
   <!-- Add your LinkedIn, Twitter, or others below if you want -->
 </p>
 
----
 
-## 🤪 Fun Facts
-
-- 🎸 I also chord on guitar and keyboard!
-- 🌱 Always learning || Always coding || Always perfecting my craft
-
----
