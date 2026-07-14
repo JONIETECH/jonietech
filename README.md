@@ -18,8 +18,6 @@
   <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white&style=for-the-badge" />
   <img src="https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white&style=for-the-badge" />
   <img src="https://img.shields.io/badge/UI/UX-Design-FF4088?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Graphics-Design-009688?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Music-Producer-FFD700?style=for-the-badge" />
 </p>
 
 ---
