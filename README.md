@@ -7,7 +7,6 @@
 <h1 align="center">RWOTHOMIO JONATHAN</h1>
 
 <p align="center">
-  <b>Finalist Computer Science Student @ Makerere University</b><br/>
   <b>Web & Mobile Developer | Software Engineer | UI/UX Perfectionist | Graphics Designer</b><br/>
 </p>
 
@@ -25,15 +24,7 @@
 
 ---
 
-
-<!-- Add your favorite projects below! 
-## 🌟 Featured Projects
-- [Project 1 Title](https://github.com/JONIETECH/project1) – Cool description about the project.
-- [Project 2 Title](https://github.com/JONIETECH/project2) – Cool description about the project.
--->
----
-
-## 📫 Connect with Me
+## Connect with Me
 
 <p align="center">
   <a href="https://jonietech.dev"><img src="https://img.shields.io/badge/Website-jonietech.dev-1e90ff?style=for-the-badge" /></a>
