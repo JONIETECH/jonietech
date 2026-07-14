@@ -28,7 +28,7 @@
 
 <p align="center">
   <a href="https://jonietech.dev"><img src="https://img.shields.io/badge/Website-jonietech.dev-1e90ff?style=for-the-badge" /></a>
-  <a href="mailto:jonietech.ug@gmail.com"><img src="https://img.shields.io/badge/Email-info@jonietech.com-d14836?style=for-the-badge" /></a>
+  <a href="mailto:jonietech.ug@gmail.com"><img src="https://img.shields.io/badge/Email-JONIETECH.Ug@gmail.com-d14836?style=for-the-badge" /></a>
   <!-- Add your LinkedIn, Twitter, or others below if you want -->
 </p>
 
